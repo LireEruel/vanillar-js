@@ -5,10 +5,15 @@
   --clr-green-teal: hsl(166, 100%, 37%);
   --clr-blue-cobalt: hsl(234, 85%, 45%);
   --clr-white: hsla(0, 0%, 100%, 1);
+  --clr-gray-7: hsl(0, 0%, 55%);
+  --clr-red-light-screen: hsla(0, 100%, 67%, 0.1);
+  --clr-yellow-orangey-screen: hsla(39, 100%, 56%, 0.1);
+  --clr-green-teal-screen: hsla(166, 100%, 37%, 0.1);
+  --gradients-blue-violet-screen: hsla(256, 72%, 46%, 0.1);
   --clr-neutral-white: hsla(0, 0%, 100%, 0.5);
   --clr-neutral-blue-pale: hsl(221, 100%, 96%);
   --clr-neutral-lavender: hsl(241, 100%, 89%);
-  --clr-neutral-blue-grey: hsl(224, 30%, 27%);
+  --clr-neutral-blue-gray: hsl(224, 30%, 27%);
   --gradients-blue-slate: hsl(252, 100%, 67%);
   --gradients-blue-royal: hsl(241, 81%, 54%);
   --gradients-blue-violet: hsla(256, 72%, 46%, 1);
@@ -18,9 +23,13 @@
   --font-weigth-bold: 800;
 }
 
+body {
+  height: 100vh;
+}
+
 #resultSummaryComponentMain {
   width: 600px;
-  height: 800px;
+  height: 450px;
   margin: auto;
   display: flex;
   border-radius: 5%;
@@ -40,6 +49,7 @@
   font-size: 1rem;
   font-weight: var(--font-weight-normal);
   font-family: "Inconsolata", monospace;
+  margin: 1.5rem;
 }
 #resultSummaryComponentMain .result-card .score-circle {
   width: 150px;
@@ -62,12 +72,67 @@
 }
 #resultSummaryComponentMain .result-card h2 {
   color: var(--clr-white);
+  margin: 2rem;
 }
 #resultSummaryComponentMain .result-card .bottom-text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--clr-neutral-white);
   text-align: center;
   width: 70%;
+  line-height: 1.3;
+}
+#resultSummaryComponentMain .summary-side {
+  width: 50%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+#resultSummaryComponentMain .summary-side ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#resultSummaryComponentMain .summary-side ul .summary-box {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 5%;
+}
+#resultSummaryComponentMain .summary-side ul .summary-box h4 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+}
+#resultSummaryComponentMain .summary-side ul .summary-box h5 {
+  color: var(--clr-gray-7);
+  font-size: 0.9rem;
+}
+#resultSummaryComponentMain .summary-side ul .summary-box span {
+  color: var(--clr-neutral-blue-gray);
+}
+#resultSummaryComponentMain .summary-side .reaction {
+  background-color: var(--clr-red-light-screen);
+  color: var(--clr-red-light);
+}
+#resultSummaryComponentMain .summary-side .memory {
+  background-color: var(--clr-yellow-orangey-screen);
+  color: var(--clr-yellow-orangey);
+}
+#resultSummaryComponentMain .summary-side .verbal {
+  background-color: var(--clr-green-teal-screen);
+  color: var(--clr-green-teal);
+}
+#resultSummaryComponentMain .summary-side .visual {
+  background-color: var(--gradients-blue-violet-screen);
+  color: var(--gradients-blue-violet);
+}
+#resultSummaryComponentMain .summary-side .continue-button {
+  width: 90%;
+  height: 10%;
+  border-radius: 30px;
+  background-color: var(--clr-neutral-blue-gray);
+  color: var(--clr-white);
+  border: none;
 }
 
 @media (max-width: 800px) {
