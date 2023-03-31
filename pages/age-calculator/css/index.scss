@@ -1,0 +1,36 @@
+:root {
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+  font-family: "Noto Serif KR", serif;
+
+  --clr-primary-purple: hsl(259, 100%, 65%);
+  --clr-primary-red: hsl(0, 100%, 67%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-off-white: hsl(0, 0%, 94%);
+  --clr-neutral-light-grey: hsl(0, 0%, 86%);
+  --clr-neutral-Smokey-grey: hsl(0, 1%, 44%);
+  --clr-neutral-off-black: hsl(0, 0%, 8%);
+
+  --clr-screen-purple: hsla(252, 66%, 97%);
+  --font-size-input: 32px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-screen-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ageCalculator {
+  width: 1000px;
+  height: 900px;
+  background-color: var(--clr-neutral-white);
+  label,
+  p,
+  span {
+    font-family: "Poppins", sans-serif;
+  }
+}
