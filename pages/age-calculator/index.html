@@ -29,18 +29,23 @@
   <body>
     <div id="ageCalculator">
       <form id="inputForm">
-        <label for="day">day</label>
-        <input type="number" id="day" name="day" />
-        <label for="day">month</label>
-        <input type="number" id="month" name="month" />
-        <label for="day">year</label>
-        <input type="number" id="year" name="year" />
-        <hr />
-        <button type="submit">
-          <img src="./assets/images/icon-arrow.svg" />
-        </button>
+        <div class="input-set">
+          <label for="day">Day</label>
+          <input type="number" id="day" name="day" placeholder="DD" />
+        </div>
+        <div class="input-set">
+          <label for="day">Month</label>
+          <input type="number" id="month" name="month" placeholder="MM" />
+        </div>
+        <div class="input-set">
+          <label for="day">Year</label>
+          <input type="number" id="year" name="year" placeholder="YYYY" />
+        </div>
       </form>
 
+      <button type="submit">
+        <img src="./assets/images/icon-arrow.svg" />
+      </button>
       <p><span>38</span>years</p>
       <p><span>3</span>months</p>
       <p><span>38</span>years</p>

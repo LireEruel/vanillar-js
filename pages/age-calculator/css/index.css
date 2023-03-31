@@ -10,6 +10,9 @@
   --clr-neutral-off-black: hsl(0, 0%, 8%);
   --clr-screen-purple: hsla(252, 66%, 97%);
   --font-size-input: 32px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-maximum: 800;
 }
 
 body {
@@ -22,14 +25,42 @@ body {
 }
 
 #ageCalculator {
-  width: 1000px;
-  height: 900px;
+  width: 800px;
+  height: 700px;
   background-color: var(--clr-neutral-white);
+  padding: 2%;
 }
 #ageCalculator label,
 #ageCalculator p,
 #ageCalculator span {
   font-family: "Poppins", sans-serif;
+}
+#ageCalculator form {
+  display: flex;
+  gap: 5%;
+}
+#ageCalculator form .input-set {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#ageCalculator form .input-set label {
+  font-weight: var(--font-weight-bold);
+}
+#ageCalculator form .input-set input {
+  padding: 5%;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  border: 1px solid var(--clr-neutral-off-white);
+  border-radius: 10px;
+}
+#ageCalculator button {
+  background-color: var(--clr-primary-purple);
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=index.css.map */
