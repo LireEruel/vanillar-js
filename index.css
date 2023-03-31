@@ -49,6 +49,7 @@ header {
   margin: 0px auto 2rem;
   display: grid;
   gap: 3rem 2rem;
+  padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
 
@@ -68,4 +69,13 @@ header {
   text-align: center;
   color: black;
   font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+  .header-content {
+    display: block;
+  }
+  .header-img {
+    display: none;
+  }
 }
