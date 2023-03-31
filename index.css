@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+main {
+  width: 1100px;
+  margin: auto;
+}
+header {
+  width: 100%;
+  margin: 0 auto;
+  text-align: start;
+  padding: 6% 0;
+  min-height: 40vh;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.header-title > h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Inconsolata", monospace;
+}
+
+.header-title > p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.header-title > p > span {
+  border-bottom: 2px solid #f0db51;
+}
+
+section > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Inconsolata", monospace;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+a > p {
+  text-decoration: none;
+}

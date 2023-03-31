@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../boilerplate.css" />
+    <link rel="stylesheet" href="Calc.css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <main>
+      <div id="calculator">
+        <input type="text" id="input" readonly />
+        <div class="btn-wrap">
+          <div class="btn-row">
+            <input class="btn" type="button" value="C" onclick="Clear()" />
+            <input class="btn" type="button" value="%" onclick="Solve('%')" />
+            <input class="btn" type="button" value="←" onclick="Back()" />
+            <input class="btn" type="button" value="/" onclick="Solve('/')" />
+          </div>
+          <div class="btn-row">
+            <input class="btn" type="button" value="7" onclick="Solve('7')" />
+            <input class="btn" type="button" value="8" onclick="Solve('8')" />
+            <input class="btn" type="button" value="9" onclick="Solve('9')" />
+            <input class="btn" type="button" value="x" onclick="Solve('X')" />
+          </div>
+          <div class="btn-row">
+            <input class="btn" type="button" value="4" onclick="Solve('4')" />
+            <input class="btn" type="button" value="5" onclick="Solve('5')" />
+            <input class="btn" type="button" value="6" onclick="Solve('6')" />
+            <input class="btn" type="button" value="-" onclick="Solve('-')" />
+          </div>
+          <div class="btn-row">
+            <input class="btn" type="button" value="1" onclick="Solve('1')" />
+            <input class="btn" type="button" value="2" onclick="Solve('2')" />
+            <input class="btn" type="button" value="3" onclick="Solve('3')" />
+            <input class="btn" type="button" value="+" onclick="Solve('+')" />
+          </div>
+          <div class="btn-row">
+            <input class="btn" type="button" value="00" onclick="Solve('00')" />
+            <input class="btn" type="button" value="0" onclick="Solve('0')" />
+            <input class="btn" type="button" value="." onclick="Solve('.')" />
+            <input class="btn" type="button" value="=" onclick="Result()" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="calculater.js"></script>
+  </body>
+</html>
