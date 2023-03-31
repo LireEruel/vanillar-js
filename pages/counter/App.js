@@ -43,14 +43,26 @@ class App {
     increaseBtn.addEventListener("click", () => {
       this.count++;
       count.textContent = this.count;
+      if (this.count == 0) {
+        count.classList.remove("negative");
+      } else if (this.count > 0) {
+        count.classList.add("positive");
+      }
     });
     decreaseBtn.addEventListener("click", () => {
       this.count--;
       count.textContent = this.count;
+      if (this.count == 0) {
+        count.classList.remove("positive");
+      } else if (this.count < 0) {
+        count.classList.add("negative");
+      }
     });
     resetBtn.addEventListener("click", () => {
       this.count = 0;
       count.textContent = this.count;
+      count.classList.remove("negative");
+      count.classList.remove("positive");
     });
   }
 }

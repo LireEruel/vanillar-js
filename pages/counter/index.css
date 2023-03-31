@@ -80,6 +80,31 @@ h1 {
   font-weight: bold;
 }
 
+.positive {
+  color: var(--clr-green-dark);
+}
+
+.negative {
+  color: var(--clr-red-dark);
+}
+
 .btn {
   margin: 0.5rem;
+}
+.btn:hover {
+  color: var(--clr-white);
+}
+
+.decrease:hover {
+  background-color: var(--clr-red-light);
+  border-color: var(--clr-red-dark);
+}
+
+.reset:hover {
+  background-color: var(--clr-black);
+}
+
+.increase:hover {
+  background-color: var(--clr-green-light);
+  border-color: var(--clr-green-dark);
 }

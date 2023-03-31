@@ -3,7 +3,6 @@ document.addEventListener("keydown", (e) => {
   onKeyDowm(e.key);
 });
 function onKeyDowm(inputKeyValue) {
-  console.log(inputKeyValue);
   switch (inputKeyValue) {
     case "Backspace":
       Back();
