@@ -5,8 +5,9 @@
   --clr-yellow-orangey: hsl(39, 100%, 56%);
   --clr-green-teal: hsl(166, 100%, 37%);
   --clr-blue-cobalt: hsl(234, 85%, 45%);
+  --clr-white: hsla(0, 0%, 100%, 1);
 
-  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-white: hsla(0, 0%, 100%, 0.5);
   --clr-neutral-blue-pale: hsl(221, 100%, 96%);
   --clr-neutral-lavender: hsl(241, 100%, 89%);
   --clr-neutral-blue-grey: hsl(224, 30%, 27%);
@@ -17,15 +18,67 @@
   --gradients-blue-violet: hsla(256, 72%, 46%, 1);
   --gradients-blue-persian: hsla(241, 72%, 46%, 0);
 
-  font-family: "Inconsolata", monospace;
+  --font-weight-normal: 500;
+  --font-weight-medium: 700;
+  --font-weigth-bold: 800;
 }
 //background-image: linear-gradient(red, yellow);
 #resultSummaryComponentMain {
-  width: 800px;
+  width: 600px;
   height: 800px;
   margin: auto;
   display: flex;
+  border-radius: 5%;
+  box-shadow: 10px 20px 30px var(--clr-neutral-lavender);
+
+  font-family: "Inconsolata", monospace;
   .result-card {
+    background-image: linear-gradient(
+      var(--gradients-blue-slate),
+      var(--gradients-blue-royal)
+    );
+    border-radius: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      color: var(--clr-neutral-white);
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      font-family: "Inconsolata", monospace;
+    }
+    .score-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(
+        var(--gradients-blue-violet),
+        var(--gradients-blue-royal)
+      );
+      .score {
+        font-size: 4rem;
+        color: var(--clr-white);
+        font-weight: var(--font-weigth-bold);
+      }
+      .rank-info {
+        font-size: 0.7rem;
+        color: var(--clr-neutral-white);
+      }
+    }
+    h2 {
+      color: var(--clr-white);
+    }
+    .bottom-text {
+      font-size: 0.9rem;
+      color: var(--clr-neutral-white);
+      text-align: center;
+      width: 70%;
+    }
   }
 }
 
