@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700;800&display=swap");
+:root {
+  --clr-red-light: hsl(0, 100%, 67%);
+  --clr-yellow-orangey: hsl(39, 100%, 56%);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  --clr-blue-cobalt: hsl(234, 85%, 45%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-blue-pale: hsl(221, 100%, 96%);
+  --clr-neutral-lavender: hsl(241, 100%, 89%);
+  --clr-neutral-blue-grey: hsl(224, 30%, 27%);
+  --gradients-blue-slate: hsl(252, 100%, 67%);
+  --gradients-blue-royal: hsl(241, 81%, 54%);
+  --gradients-blue-violet: hsla(256, 72%, 46%, 1);
+  --gradients-blue-persian: hsla(241, 72%, 46%, 0);
+  font-family: "Inconsolata", monospace;
+}
+
+#resultSummaryComponentMain {
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  display: flex;
+}
+@media (max-width: 800px) {
+  #resultSummaryComponentMain {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
