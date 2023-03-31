@@ -10,6 +10,7 @@ class Main {
 
     const $btnGroup = document.createElement("div");
     const $addBoxButton = document.createElement("button");
+    const $deleteBoxButton = document.createElement("button");
     const $containerLabel = document.createElement("h4");
     const $containerWrap = document.createElement("div");
     const $container = document.createElement("div");
@@ -17,6 +18,7 @@ class Main {
     this.$body.appendChild($main);
     $main.appendChild($btnGroup);
     $btnGroup.appendChild($addBoxButton);
+    $btnGroup.appendChild($deleteBoxButton);
     $main.appendChild($containerWrap);
     $containerWrap.appendChild($containerLabel);
     $containerWrap.appendChild($container);
@@ -26,7 +28,13 @@ class Main {
 
     $addBoxButton.textContent = "add Box";
     $addBoxButton.addEventListener("click", () => this.addBox($container));
-    $addBoxButton.className = "add-box-btn";
+    $addBoxButton.className = "box-btn";
+
+    $deleteBoxButton.textContent = "delete Box";
+    $deleteBoxButton.addEventListener("click", () =>
+      this.deleteBox($container)
+    );
+    $deleteBoxButton.className = "box-btn";
 
     $container.className = "container";
   }
@@ -37,6 +45,13 @@ class Main {
     $box.className = "box";
     $container.appendChild($box);
     this.boxCount++;
+  }
+
+  deleteBox($container) {
+    const lastChild = $container.lastElementChild;
+    if (lastChild) {
+      $container.removeChild(lastChild);
+    }
   }
 }
 
