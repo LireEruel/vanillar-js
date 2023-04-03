@@ -88,6 +88,7 @@ body {
   width: 50%;
   padding: 5%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 8%;
 }
@@ -96,6 +97,7 @@ body {
   flex-direction: column;
   gap: 20px;
   font-size: 1.3rem;
+  width: 100%;
 }
 #resultSummaryComponentMain .summary-side ul li {
   list-style-position: inside;
@@ -105,6 +107,7 @@ body {
   justify-content: space-between;
   border-radius: 10px;
   padding: 5%;
+  width: 100%;
 }
 #resultSummaryComponentMain .summary-side ul .summary-box div {
   display: flex;
@@ -150,9 +153,32 @@ body {
   background-image: linear-gradient(var(--gradients-blue-violet), var(--gradients-blue-royal));
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #resultSummaryComponentMain {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    display: block;
+  }
+  #resultSummaryComponentMain {
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 30%;
+  }
+  #resultSummaryComponentMain .result-card {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-bottom: 5%;
+  }
+  #resultSummaryComponentMain .summary-side {
+    width: 100%;
+    height: 60vh;
+  }
+  #resultSummaryComponentMain .summary-side h3 {
+    margin-bottom: 5%;
   }
 }
 
