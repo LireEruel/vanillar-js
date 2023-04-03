@@ -95,6 +95,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: 1.3rem;
+}
+#resultSummaryComponentMain .summary-side ul li {
+  list-style-position: inside;
 }
 #resultSummaryComponentMain .summary-side ul .summary-box {
   display: flex;
