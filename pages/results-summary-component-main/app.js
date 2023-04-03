@@ -33,15 +33,21 @@ class App {
       const $h4 = document.createElement("h4");
       const $h5 = document.createElement("h5");
       const $span = document.createElement("span");
+      const $icon = document.createElement("img");
+      const $div = document.createElement("div");
 
       $ul.appendChild($li);
-      $li.appendChild($h4);
+      $li.appendChild($div);
+      $div.appendChild($icon);
+      $div.appendChild($h4);
       $li.appendChild($h5);
       $h5.appendChild($span);
 
       $li.classList = "summary-box " + score.category.toLowerCase();
+      $icon.src = score.icon;
       $h4.textContent = score.category;
       $span.textContent = score.score;
+
       $h5.appendChild(document.createTextNode(" / 100"));
     }
   }

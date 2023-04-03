@@ -106,6 +106,11 @@ body {
   border-radius: 10px;
   padding: 5%;
 }
+#resultSummaryComponentMain .summary-side ul .summary-box div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
 #resultSummaryComponentMain .summary-side ul .summary-box h4 {
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
