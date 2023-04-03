@@ -25,6 +25,9 @@
 
 body {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #resultSummaryComponentMain {
@@ -133,6 +136,9 @@ body {
   background-color: var(--clr-neutral-blue-gray);
   color: var(--clr-white);
   border: none;
+}
+#resultSummaryComponentMain .summary-side .continue-button:hover {
+  background-image: linear-gradient(var(--gradients-blue-violet), var(--gradients-blue-royal));
 }
 
 @media (max-width: 800px) {
