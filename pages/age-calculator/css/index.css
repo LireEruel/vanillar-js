@@ -37,6 +37,10 @@ body {
 }
 #ageCalculator form {
   display: flex;
+  flex-direction: column;
+}
+#ageCalculator .input-wrap {
+  display: flex;
   gap: 5%;
 }
 #ageCalculator form .input-set {
@@ -68,12 +72,23 @@ body {
   width: 89%;
   border: solid 1px var(--clr-neutral-light-grey);
 }
-.submit-btn {
+#submitBtn {
   background-color: var(--clr-primary-purple);
   width: 80px;
   height: 80px;
   border: none;
   border-radius: 40px;
+  cursor: pointer;
 }
 
+#result p {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: var(--font-weight-maximum);
+  font-style: italic;
+}
+#result p span {
+  color: var(--clr-primary-purple);
+  margin: 0 1rem;
+}
 /*# sourceMappingURL=index.css.map */

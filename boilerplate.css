@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   min-height: 100%;
   background: #fff;
   color: #000;
-  font-family: 'Noto Serif KR', serif;
+  font-family: "Noto Serif KR", serif;
 }
 
 /* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
@@ -166,4 +166,3 @@ button {
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
   border-radius: var(--radius);
 }
-
