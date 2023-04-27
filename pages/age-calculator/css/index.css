@@ -55,7 +55,17 @@ body {
   border: 1px solid var(--clr-neutral-off-white);
   border-radius: 10px;
 }
-#ageCalculator button {
+
+.submit-btn-wrap {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+.submit-btn-wrap hr {
+  width: 89%;
+  border: solid 1px var(--clr-neutral-light-grey);
+}
+.submit-btn {
   background-color: var(--clr-primary-purple);
   width: 80px;
   height: 80px;
