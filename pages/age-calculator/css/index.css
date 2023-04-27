@@ -47,9 +47,12 @@ body {
 }
 #ageCalculator form .input-set label {
   font-weight: var(--font-weight-bold);
+  color: var(--clr-neutral-Smokey-grey);
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
 }
 #ageCalculator form .input-set input {
-  padding: 5%;
+  padding: 10%;
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
   border: 1px solid var(--clr-neutral-off-white);
