@@ -30,7 +30,7 @@
     <div id="ageCalculator">
       <form id="inputForm">
         <div class="input-wrap">
-          <div class="input-set">
+          <fieldset id="fieldsetDay" class="input-set">
             <label for="day">DAY</label>
             <input
               type="number"
@@ -38,11 +38,10 @@
               name="day"
               placeholder="DD"
               required
-              min="1"
-              max="31"
             />
-          </div>
-          <div class="input-set">
+            <div class="error-text"></div>
+          </fieldset>
+          <fieldset id="fieldsetMonth" class="input-set">
             <label for="month">MONTH</label>
             <input
               type="number"
@@ -50,11 +49,10 @@
               name="month"
               placeholder="MM"
               required
-              min="1"
-              max="12"
             />
-          </div>
-          <div class="input-set">
+            <div class="error-text"></div>
+          </fieldset>
+          <fieldset id="fieldsetYear" class="input-set">
             <label for="year">YEAR</label>
             <input
               type="number"
@@ -63,7 +61,8 @@
               placeholder="YYYY"
               required
             />
-          </div>
+            <div class="error-text"></div>
+          </fieldset>
         </div>
 
         <div class="submit-btn-wrap">

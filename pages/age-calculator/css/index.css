@@ -44,7 +44,6 @@ body {
   gap: 5%;
 }
 #ageCalculator form .input-set {
-  width: 140px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -61,6 +60,24 @@ body {
   font-weight: var(--font-weight-bold);
   border: 1px solid var(--clr-neutral-off-white);
   border-radius: 10px;
+}
+#ageCalculator form input:invalid {
+  border: 2px solid var(--clr-primary-red);
+}
+fieldset {
+  min-width: 0;
+  border: none;
+}
+
+fieldset:invalid > label:first-of-type {
+  color: var(--clr-primary-red) !important;
+}
+.error-text {
+  color: var(--clr-primary-red);
+  font-size: 0.8rem;
+  font-style: italic;
+  height: 1rem;
+  overflow: hidden;
 }
 
 .submit-btn-wrap {
