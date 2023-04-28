@@ -61,15 +61,15 @@ body {
   border: 1px solid var(--clr-neutral-off-white);
   border-radius: 10px;
 }
-#ageCalculator form input:invalid {
-  border: 2px solid var(--clr-primary-red);
+.error-fieldset input {
+  border: 2px solid var(--clr-primary-red) !important;
 }
 fieldset {
   min-width: 0;
   border: none;
 }
 
-fieldset:invalid > label:first-of-type {
+.error-fieldset label {
   color: var(--clr-primary-red) !important;
 }
 .error-text {

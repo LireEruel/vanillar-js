@@ -85,7 +85,7 @@ class ageCalculator {
     const fieldsetElement = document.getElementById(fieldsetId);
     $input.setCustomValidity(errorMessage);
     $input.setAttribute("invalid", true);
-    console.log($input);
+    fieldsetElement.classList.add("error-fieldset");
     const lastChild = fieldsetElement.lastElementChild;
     lastChild.textContent = errorMessage;
   }
@@ -93,7 +93,7 @@ class ageCalculator {
     const $input = document.getElementById(inputId);
     const fieldsetElement = document.getElementById(fieldsetId);
     $input.removeAttribute("invalid");
-    console.log($input);
+    fieldsetElement.classList.remove("error-fieldset");
     const lastChild = fieldsetElement.lastElementChild;
     lastChild.textContent = "";
   }
