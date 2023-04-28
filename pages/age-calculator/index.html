@@ -32,21 +32,43 @@
         <div class="input-wrap">
           <div class="input-set">
             <label for="day">DAY</label>
-            <input type="number" id="day" name="day" placeholder="DD" />
+            <input
+              type="number"
+              id="day"
+              name="day"
+              placeholder="DD"
+              required
+              min="1"
+              max="31"
+            />
           </div>
           <div class="input-set">
             <label for="month">MONTH</label>
-            <input type="number" id="month" name="month" placeholder="MM" />
+            <input
+              type="number"
+              id="month"
+              name="month"
+              placeholder="MM"
+              required
+              min="1"
+              max="12"
+            />
           </div>
           <div class="input-set">
             <label for="year">YEAR</label>
-            <input type="number" id="year" name="year" placeholder="YYYY" />
+            <input
+              type="number"
+              id="year"
+              name="year"
+              placeholder="YYYY"
+              required
+            />
           </div>
         </div>
 
         <div class="submit-btn-wrap">
           <hr />
-          <button type="button" id="submitBtn">
+          <button type="submit" id="submitBtn">
             <img src="./assets/images/icon-arrow.svg" />
           </button>
         </div>
