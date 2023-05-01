@@ -10,12 +10,13 @@ class ageCalculator {
       .addEventListener("submit", (e) => this.onClickSubmitBtn(e));
   }
   onClickSubmitBtn(e) {
+    e.preventDefault();
+
     let input_day = document.querySelector("#day").value;
     let input_month = document.querySelector("#month").value;
     let input_year = document.querySelector("#year").value;
 
     if (this.validateDateInput(input_day, input_month, input_year)) {
-      e.preventDefault();
       this.calculate(input_day, input_month, input_year);
     } else {
       console.log("날짜가 잘못됨.");
@@ -50,9 +51,18 @@ class ageCalculator {
       }
     }
     if (!inputDate.isBefore(dayjs())) {
-      // console.log("inputDate.isBefore(dayjs())");
       valid = false;
+      const now = dayjs();
+      if (inputYear > now.year()) {
+        this.setError("fieldsetYear", "year", "Must be in the past");
+      } else if (inputMonth > now.month()) {
+        this.setError("fieldsetMonth", "month", "Must be in the past");
+      } else {
+        this.setError("fieldsetDay", "day", "Must be in the past");
+      }
+      // console.log("inputDate.isBefore(dayjs())");
     }
+
     return valid;
   }
 
@@ -60,18 +70,20 @@ class ageCalculator {
     let $yearsValue = document.getElementById("yearsValue");
     let $monthsValue = document.getElementById("monthsValue");
     let $daysValue = document.getElementById("daysValue");
+    console.log(input_day, input_month, input_year);
     if (input_day && input_month && input_year) {
       const now = dayjs();
       now.format();
       let inputDate = dayjs(`${input_year}-${input_month}-${input_day}`);
+      console.log(inputDate);
       const diffYears = now.diff(inputDate, "year"); // 날짜 차이 계산
+
       const diffMonths = now.diff(inputDate, "month") % 12;
-      if (inputDate.isBefore(now)) {
-        inputDate = inputDate.add(now.diff(inputDate, "month"), "month");
-      } else {
-        inputDate = inputDate.subtract(now.diff(inputDate, "month"), "month");
-      }
+      console.log(now.diff(inputDate, "month"));
+      inputDate = inputDate.add(now.diff(inputDate, "month"), "month");
+
       const diffDays = now.diff(inputDate, "day");
+      console.log(diffDays, diffMonths, diffYears);
       $yearsValue.textContent = diffYears;
       $monthsValue.textContent = diffMonths;
       $daysValue.textContent = diffDays;
