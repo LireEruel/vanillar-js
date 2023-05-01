@@ -44,6 +44,15 @@ video {
 h1 {
   font-size: 1.4rem;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
 
 /* begins to set up font sizes relative to base rem – h1 has been used as an example */
 
@@ -55,8 +64,11 @@ p {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  margin: 0;
 }
-
+ul {
+  padding: 0;
+}
 /* sets hyphenation by default on paragraphs */
 
 textarea {
