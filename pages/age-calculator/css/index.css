@@ -43,7 +43,7 @@ body {
 }
 #ageCalculator .input-wrap {
   display: flex;
-  gap: 1%;
+  gap: 5%;
   width: 70%;
 }
 #ageCalculator form .input-set {
@@ -76,6 +76,7 @@ input:focus {
 fieldset {
   min-width: 0;
   border: none;
+  padding: 0;
 }
 
 .error-fieldset label {
@@ -117,5 +118,55 @@ fieldset {
 #result p span {
   color: var(--clr-primary-purple);
   margin: 0 1rem;
+}
+
+@media all and (max-width: 900px) {
+  #ageCalculator {
+    width: 90%;
+    height: auto;
+    padding: 10%;
+    border-bottom-right-radius: 7rem;
+  }
+  #ageCalculator .input-wrap {
+    width: 100%;
+  }
+  .submit-btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #ageCalculator form .input-set {
+    height: auto;
+    gap: 5px;
+  }
+  #ageCalculator form .input-set label {
+    font-size: 0.5rem;
+  }
+  .submit-btn-wrap hr {
+    width: 100%;
+    position: relative;
+    top: 1.6rem;
+    margin: 0px;
+  }
+  #ageCalculator form .input-set input {
+    font-size: 1rem;
+    padding: 20%;
+  }
+  #submitBtn {
+    margin: 0 auto;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+  }
+  #submitBtn img {
+    width: 50%;
+  }
+  #result {
+    margin-top: 2rem;
+  }
+  #result p {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */
