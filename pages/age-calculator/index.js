@@ -10,45 +10,29 @@ class ageCalculator {
       .addEventListener("submit", (e) => this.onClickSubmitBtn(e));
   }
   onClickSubmitBtn(e) {
+    document.getElementById("yearsValue").textContent = "--";
+    document.getElementById("monthsValue").textContent = "--";
+    document.getElementById("daysValue").textContent = "--";
+    this.setValid("fieldsetYear", "year");
+    this.setValid("fieldsetMonth", "month");
+    this.setValid("fieldsetDay", "day");
+    // 초기화
+
+    e.preventDefault();
     let input_day = document.querySelector("#day").value;
     let input_month = document.querySelector("#month").value;
     let input_year = document.querySelector("#year").value;
-
     if (this.validateDateInput(input_day, input_month, input_year)) {
       e.preventDefault();
       this.calculate(input_day, input_month, input_year);
-    } else {
-      console.log("날짜가 잘못됨.");
     }
   }
   validateDateInput(inputDay, inputMonth, inputYear) {
     let valid = false;
 
     const inputDate = dayjs(`${inputYear}-${inputMonth}-${inputDay}`);
-    if (dayjs(`${inputYear}-${inputMonth}-${inputDay}`).isValid()) {
-      valid = true;
-      if (inputYear < 100) {
-        //console.log("weired year");
-        valid = false;
-        this.setError("fieldsetYear", "year", "Must be a valid year");
-      } else {
-        this.setValid("fieldsetYear", "year");
-      }
-      if (inputMonth < 1 || inputMonth > 12) {
-        // console.log("weired month");
-        valid = false;
-        this.setError("fieldsetMonth", "month", "Must be a valid month");
-      } else {
-        this.setValid("fieldsetMonth", "month");
-      }
-      if (inputDate.date() !== +inputDay) {
-        //  console.log(inputDate, inputDate.date(), +inputDay);
-        valid = false;
-        this.setError("fieldsetDay", "day", "Must be a valid day");
-      } else {
-        this.setValid("fieldsetDay", "day");
-      }
-    }
+    valid = true;
+
     if (!inputDate.isBefore(dayjs())) {
       valid = false;
       const now = dayjs();
@@ -61,12 +45,28 @@ class ageCalculator {
       }
       // console.log("inputDate.isBefore(dayjs())");
     }
-
+    if (Number.isNaN(+inputYear) || inputYear < 100) {
+      //console.log("weired year");
+      valid = false;
+      this.setError("fieldsetYear", "year", "Must be a valid year");
+    } else {
+    }
+    if (Number.isNaN(+inputMonth) || inputMonth < 1 || inputMonth > 12) {
+      // console.log("weired month");
+      valid = false;
+      this.setError("fieldsetMonth", "month", "Must be a valid month");
+    } else {
+    }
+    if (Number.isNaN(+inputDay) || inputDate.date() !== +inputDay) {
+      //  console.log(inputDate, inputDate.date(), +inputDay);
+      valid = false;
+      this.setError("fieldsetDay", "day", "Must be a valid day");
+    } else {
+    }
     return valid;
   }
 
   calculate(input_day, input_month, input_year) {
-    console.log(input_day, input_month, input_year);
     if (input_day && input_month && input_year) {
       const now = dayjs();
       now.format();
@@ -86,7 +86,6 @@ class ageCalculator {
       document.getElementById("monthsValue").textContent = diffMonths;
       document.getElementById("daysValue").textContent = diffDays;
     } else {
-      console.log("날짜가 잘못됨.");
     }
   }
 
