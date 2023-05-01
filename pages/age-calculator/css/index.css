@@ -29,6 +29,8 @@ body {
   height: 700px;
   background-color: var(--clr-neutral-white);
   padding: 2%;
+  border-radius: 2rem;
+  border-bottom-right-radius: 12rem;
 }
 #ageCalculator label,
 #ageCalculator p,
@@ -41,11 +43,13 @@ body {
 }
 #ageCalculator .input-wrap {
   display: flex;
-  gap: 5%;
+  gap: 1%;
+  width: 70%;
 }
 #ageCalculator form .input-set {
   display: flex;
   flex-direction: column;
+  height: 7rem;
   gap: 10px;
 }
 #ageCalculator form .input-set label {
@@ -60,6 +64,11 @@ body {
   font-weight: var(--font-weight-bold);
   border: 1px solid var(--clr-neutral-off-white);
   border-radius: 10px;
+}
+input:focus {
+  outline: none;
+  border-color: var(--clr-primary-purple) !important;
+  caret-color: var(--clr-primary-purple);
 }
 .error-fieldset input {
   border: 2px solid var(--clr-primary-red) !important;
@@ -77,7 +86,6 @@ fieldset {
   font-size: 0.8rem;
   font-style: italic;
   height: 1.2rem;
-  overflow: hidden;
 }
 
 .submit-btn-wrap {
@@ -97,7 +105,9 @@ fieldset {
   border-radius: 40px;
   cursor: pointer;
 }
-
+#submitBtn:hover {
+  background-color: var(--clr-neutral-off-black);
+}
 #result p {
   margin: 0;
   font-size: 6rem;
