@@ -10,13 +10,12 @@ class ageCalculator {
       .addEventListener("submit", (e) => this.onClickSubmitBtn(e));
   }
   onClickSubmitBtn(e) {
-    e.preventDefault();
-
     let input_day = document.querySelector("#day").value;
     let input_month = document.querySelector("#month").value;
     let input_year = document.querySelector("#year").value;
 
     if (this.validateDateInput(input_day, input_month, input_year)) {
+      e.preventDefault();
       this.calculate(input_day, input_month, input_year);
     } else {
       console.log("날짜가 잘못됨.");
@@ -66,27 +65,26 @@ class ageCalculator {
     return valid;
   }
 
-  calculate(input_year, input_month, input_day) {
-    let $yearsValue = document.getElementById("yearsValue");
-    let $monthsValue = document.getElementById("monthsValue");
-    let $daysValue = document.getElementById("daysValue");
+  calculate(input_day, input_month, input_year) {
     console.log(input_day, input_month, input_year);
     if (input_day && input_month && input_year) {
       const now = dayjs();
       now.format();
-      let inputDate = dayjs(`${input_year}-${input_month}-${input_day}`);
-      console.log(inputDate);
-      const diffYears = now.diff(inputDate, "year"); // 날짜 차이 계산
-
-      const diffMonths = now.diff(inputDate, "month") % 12;
-      console.log(now.diff(inputDate, "month"));
-      inputDate = inputDate.add(now.diff(inputDate, "month"), "month");
-
-      const diffDays = now.diff(inputDate, "day");
-      console.log(diffDays, diffMonths, diffYears);
-      $yearsValue.textContent = diffYears;
-      $monthsValue.textContent = diffMonths;
-      $daysValue.textContent = diffDays;
+      const diffYears = now.get("y") - input_year; // 날짜 차이 계산
+      const diffMonths =
+        now.get("M") > input_month
+          ? now.get("M") - input_month
+          : now.get("M") + 12 - input_month;
+      const diffDays =
+        now.get("D") > input_day
+          ? now.get("D") - input_day
+          : now.get("D") +
+            this.getMonthLastDay(input_year, input_month) -
+            input_day;
+      console.log(now.get("D"), diffDays, diffMonths, diffYears);
+      document.getElementById("yearsValue").textContent = diffYears;
+      document.getElementById("monthsValue").textContent = diffMonths;
+      document.getElementById("daysValue").textContent = diffDays;
     } else {
       console.log("날짜가 잘못됨.");
     }
@@ -108,6 +106,29 @@ class ageCalculator {
     fieldsetElement.classList.remove("error-fieldset");
     const lastChild = fieldsetElement.lastElementChild;
     lastChild.textContent = "";
+  }
+  getMonthLastDay(year, month) {
+    let answer = 0;
+    if (month == 2) {
+      if (!(year % 4) && !(year % 100) && !(year % 400)) {
+        answer = 29;
+      } else {
+        answer = 28;
+      }
+    } else if (month < 8) {
+      if (month % 2) {
+        answer = 31;
+      } else {
+        answer = 30;
+      }
+    } else {
+      if (month % 2) {
+        answer = 30;
+      } else {
+        answer = 31;
+      }
+    }
+    return answer;
   }
 }
 
