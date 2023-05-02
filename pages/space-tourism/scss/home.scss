@@ -71,7 +71,6 @@
     color: #ffffff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
     .contents {
       width: 33%;
       h5 {
@@ -92,8 +91,13 @@
       }
     }
     .explore-button-wrap {
-      width: 15rem;
-      height: 15rem;
+      width: 25rem;
+      height: 25rem;
+      padding: 5rem;
+      border-radius: 100%;
+      position: relative;
+      background-color: transparent;
+
       .explore-button {
         background-color: #ffffff;
         width: 100%;
@@ -103,7 +107,11 @@
         font-family: "Bellefair", serif;
         font-size: 2rem;
         border: none;
+        cursor: pointer;
       }
+    }
+    .explore-button-wrap:hover {
+      background-color: $clr-white-10;
     }
   }
 }
