@@ -1,4 +1,65 @@
 //sass --watch scss:css
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+
 #home {
   background-image: url("../assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  $clr-black: #0b0d17;
+  $clr-netural-blue: #d0d6f9;
+  $clr-white: #ffffff;
+  $clr-white-25: rgba(255, 255, 255, 0.25);
+  $clr-white-50: rgba(255, 255, 255, 0.5);
+  $clr-grey: #979797;
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Bellefair", serif;
+  font-family: "Noto Serif KR", serif;
+  header {
+    border-top: 40px solid transparent;
+    border-left: 55px solid transparent;
+    display: flex;
+    height: 9%;
+    box-sizing: content-box;
+    justify-content: space-between;
+
+    nav {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+      width: 60%;
+      display: flex;
+      align-items: center;
+      gap: 5%;
+      padding-left: 8%;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        letter-spacing: 2.7px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        font-family: "Barlow Condensed", sans-serif;
+        span {
+          font-weight: bold;
+          margin-right: 12px;
+        }
+      }
+      .selected {
+        border-bottom: 3px solid $clr-white;
+      }
+      .hovered {
+        border-bottom: 3px solid $clr-white-50;
+      }
+    }
+    nav::before {
+      content: "";
+      width: 55%;
+      height: 1px;
+      background-color: $clr-white-25;
+      position: absolute;
+      right: 98%;
+    }
+  }
 }
