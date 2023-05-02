@@ -5,8 +5,6 @@
   height: 100vh;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
-  font-family: "Bellefair", serif;
-  font-family: "Noto Serif KR", serif;
 }
 #home header {
   border-top: 40px solid transparent;
@@ -34,16 +32,17 @@
   align-items: center;
   box-sizing: border-box;
   font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 3px solid transparent;
 }
 #home header nav a span {
   font-weight: bold;
   margin-right: 12px;
 }
-#home header nav .selected {
-  border-bottom: 3px solid #ffffff;
+#home header nav a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
 }
-#home header nav .hovered {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+#home header nav .selected {
+  border-color: #ffffff;
 }
 #home header nav::before {
   content: "";
@@ -52,6 +51,48 @@
   background-color: rgba(255, 255, 255, 0.25);
   position: absolute;
   right: 98%;
+}
+#home main {
+  position: relative;
+  top: 10%;
+  padding: 7% 24% 0 10%;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#home main .contents {
+  width: 33%;
+}
+#home main .contents h5 {
+  letter-spacing: 4.72px;
+  color: #d0d6f9;
+  text-transform: uppercase;
+}
+#home main .contents h1 {
+  margin: 2rem 0;
+  font-size: 8.5rem;
+  font-family: "Bellefair", serif;
+}
+#home main .contents p {
+  font-family: "Bellefair", serif;
+  color: #d0d6f9;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+#home main .explore-button-wrap {
+  width: 15rem;
+  height: 15rem;
+}
+#home main .explore-button-wrap .explore-button {
+  background-color: #ffffff;
+  width: 100%;
+  display: block;
+  height: 100%;
+  border-radius: 100%;
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+  border: none;
 }
 
 /*# sourceMappingURL=home.css.map */
