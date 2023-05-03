@@ -11,6 +11,9 @@ class App {
     $exploreBtn.addEventListener("mouseleave", () => {
       $exploreBtnWrap.classList.remove("hovered");
     });
+    $exploreBtn.addEventListener("click", () => {
+      window.location.replace("pages/destination.html");
+    });
   }
 }
 
