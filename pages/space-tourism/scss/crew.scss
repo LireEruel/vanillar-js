@@ -18,9 +18,9 @@
   //font-family: "Bellefair", serif;
   //   font-family: "Noto Serif KR", serif;
   main {
-    position: relative;
     padding-bottom: 0;
     color: #ffffff;
+    overflow: hidden;
     h3 {
       letter-spacing: 0.25rem;
       font-size: 2rem;
@@ -30,60 +30,50 @@
       }
     }
     #contents {
-      padding: 5% 6%;
       display: flex;
-      justify-content: space-between;
       color: $clr-netural-blue;
+      height: 100%;
       img {
-        width: 43%;
+        height: auto;
       }
       .info-container {
-        margin-left: 18%;
         width: 50%;
-        ul {
-          display: flex;
-          gap: 5%;
-        }
-        li {
-          padding-bottom: 0.7rem;
-          border-bottom: 5px solid transparent;
-          letter-spacing: 0.3rem;
-          font-size: 1.5rem;
-          cursor: pointer;
+        margin-top: 10%;
+        #role {
+          color: $clr-white-50;
           text-transform: uppercase;
+          font-family: "Bellefair", serif;
         }
-        li:hover {
-          border-color: $clr-white-50;
-        }
-        .selected {
-          color: $clr-white;
-          border-color: $clr-white !important;
-        }
-        h1 {
-          font-size: 5rem;
+        #name {
+          font-size: 4rem;
           font-family: "Bellefair", serif;
           margin: 1rem 0;
           color: $clr-white;
           text-transform: uppercase;
         }
         p {
-          line-height: 2;
+          line-height: 1.5;
           font-size: 1.5rem;
+          width: 60%;
         }
-        .bottom-container {
+        ul {
           display: flex;
-          gap: 20%;
-          .sub-info-wrap {
-            h5 {
-              font-size: 1.2rem;
-              margin: 1rem 0;
-            }
-            h2 {
-              font-size: 2rem;
-              color: $clr-white;
-              font-family: "Bellefair", serif;
-              text-transform: uppercase;
-            }
+          gap: 5%;
+          position: absolute;
+          bottom: 10%;
+          width: 15%;
+          li {
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            background-color: $clr-white-10;
+            border-radius: 1rem;
+          }
+          li:hover {
+            background-color: $clr-white-50;
+          }
+          .selected {
+            background-color: $clr-white !important;
           }
         }
       }

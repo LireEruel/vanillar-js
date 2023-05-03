@@ -8,12 +8,12 @@ class Crew {
     const $indecator = document.querySelector("ul");
     this.crews.forEach((crew, index) => {
       const $li = document.createElement("li");
-      $li.textContent = crew.name;
       $li.addEventListener("click", () => {
         this.setCrew(crew);
       });
       $indecator.appendChild($li);
     });
+    console.log($indecator);
     this.setCrew(this.crews[0]);
   }
   async getData() {
@@ -32,8 +32,9 @@ class Crew {
     document.querySelector("#name").textContent = crew.name;
     document.querySelector("#bio").textContent = crew.bio;
     document.querySelector("#targetImage").src = "../" + crew.images.png;
-    [...document.querySelector("ul").children].forEach((tab) => {
-      if (tab.textContent == crew.name) {
+    const currentIndex = this.crews.findIndex((c) => c.name === crew.name);
+    [...document.querySelector("ul").children].forEach((tab, index) => {
+      if (currentIndex == index) {
         tab.classList.add("selected");
       } else {
         tab.classList.remove("selected");

@@ -9,8 +9,7 @@ header {
   border-top: 40px solid transparent;
   border-left: 55px solid transparent;
   display: flex;
-  height: 9%;
-  box-sizing: content-box;
+  height: 12%;
   justify-content: space-between;
 }
 header nav {
@@ -53,4 +52,5 @@ header nav::before {
 }
 main {
   padding: 5% 8%;
+  height: 88%;
 }
