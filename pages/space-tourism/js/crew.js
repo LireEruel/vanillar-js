@@ -1,40 +1,39 @@
 class Crew {
   constructor() {
     this.render();
-    this.destinations = [];
+    this.crews = [];
   }
   async render() {
-    this.destinations = await this.getData();
-    const $tabs = document.querySelector("ul");
-    this.destinations.forEach((destination, index) => {
+    this.crews = await this.getData();
+    const $indecator = document.querySelector("ul");
+    this.crews.forEach((crew, index) => {
       const $li = document.createElement("li");
-      $li.textContent = destination.name;
+      $li.textContent = crew.name;
       $li.addEventListener("click", () => {
-        this.setDestination(destination);
+        this.setCrew(crew);
       });
-      $tabs.appendChild($li);
+      $indecator.appendChild($li);
     });
-    this.setDestination(this.destinations[0]);
+    this.setCrew(this.crews[0]);
   }
   async getData() {
     let data;
     try {
       const res = await fetch("../data.json");
       data = await res.json();
-      data = data.destinations;
+      data = data.crew;
     } catch (error) {
       data = [];
     }
     return data;
   }
-  async setDestination(destination) {
-    document.querySelector("h1").textContent = destination.name;
-    document.querySelector("p").textContent = destination.description;
-    document.querySelector("#distance").textContent = destination.distance;
-    document.querySelector("#travel").textContent = destination.travel;
-    document.querySelector("#targetImage").src = "../" + destination.images.png;
+  async setCrew(crew) {
+    document.querySelector("#role").textContent = crew.name;
+    document.querySelector("#name").textContent = crew.name;
+    document.querySelector("#bio").textContent = crew.bio;
+    document.querySelector("#targetImage").src = "../" + crew.images.png;
     [...document.querySelector("ul").children].forEach((tab) => {
-      if (tab.textContent == destination.name) {
+      if (tab.textContent == crew.name) {
         tab.classList.add("selected");
       } else {
         tab.classList.remove("selected");
