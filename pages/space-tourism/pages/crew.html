@@ -12,10 +12,10 @@
     />
     <link rel="stylesheet" href="../../../boilerplate.css" />
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="../css/destination.css" />
+    <link rel="stylesheet" href="../css/crew.css" />
     <title>Frontend Mentor | Space tourism website</title>
   </head>
-  <body id="destination">
+  <body id="crew">
     <header>
       <img src="../assets/shared/logo.svg" alt="logo image" />
       <nav>
@@ -28,36 +28,20 @@
       </nav>
     </header>
     <main>
-      <h3><span>01</span> PICK YOUR DESTINATION</h3>
+      <h3><span>01</span> MEET YOUR CREW</h3>
       <div id="contents">
+        <div class="info-container">
+          <h3 id="commander"></h3>
+          <h1 id="name"></h1>
+          <p id="bio"></p>
+        </div>
         <img
           id="targetImage"
-          src="../assets/destination/image-moon.png"
+          src="../assets/crew/image-douglas-hurley.webp"
           alt="image-moon"
         />
-        <div class="info-container">
-          <ul>
-            <!-- <li class="selected">MOON</li>
-            <li>MARS</li>
-            <li>EUROPA</li>
-            <li>TITAN</li> -->
-          </ul>
-          <h1></h1>
-          <p></p>
-          <hr />
-          <div class="bottom-container">
-            <div class="sub-info-wrap">
-              <h5>AVG. DISTANCE</h5>
-              <h2 id="distance">384,400KM</h2>
-            </div>
-            <div class="sub-info-wrap">
-              <h5>EST. TRAVEL TIME</h5>
-              <h2 id="travel">3 DAYS</h2>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
-    <script type="module" src="../js/destination.js"></script>
+    <script type="module" src="../js/crew.js"></script>
   </body>
 </html>
