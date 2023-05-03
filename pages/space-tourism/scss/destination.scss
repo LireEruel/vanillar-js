@@ -50,6 +50,7 @@
           letter-spacing: 0.3rem;
           font-size: 1.5rem;
           cursor: pointer;
+          text-transform: uppercase;
         }
         li:hover {
           border-color: $clr-white-50;
@@ -63,6 +64,7 @@
           font-family: "Bellefair", serif;
           margin: 1rem 0;
           color: $clr-white;
+          text-transform: uppercase;
         }
         p {
           line-height: 2;
@@ -80,6 +82,7 @@
               font-size: 2rem;
               color: $clr-white;
               font-family: "Bellefair", serif;
+              text-transform: uppercase;
             }
           }
         }
