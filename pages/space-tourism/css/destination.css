@@ -1,59 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
-#home {
+#destination {
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
   height: 100vh;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
 }
-#home main {
+#destination main {
   position: relative;
-  top: 10%;
-  padding: 7% 24% 0 10%;
+  padding-bottom: 0;
   color: #ffffff;
+}
+#destination main h3 {
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
+#destination main h3 span {
+  color: rgba(255, 255, 255, 0.25);
+  margin-right: 2%;
+}
+#destination main #contents {
+  padding: 5% 6%;
   display: flex;
   justify-content: space-between;
-}
-#home main .contents {
-  width: 33%;
-}
-#home main .contents h5 {
-  letter-spacing: 4.72px;
   color: #d0d6f9;
-  text-transform: uppercase;
 }
-#home main .contents h1 {
-  margin: 2rem 0;
-  font-size: 8.5rem;
-  font-family: "Bellefair", serif;
+#destination main #contents img {
+  width: 43%;
 }
-#home main .contents p {
-  font-family: "Bellefair", serif;
-  color: #d0d6f9;
-  font-size: 1.2rem;
-  line-height: 1.5;
+#destination main #contents .info-container {
+  margin-left: 18%;
+  width: 50%;
 }
-#home main .explore-button-wrap {
-  width: 25rem;
-  height: 25rem;
-  padding: 5rem;
-  border-radius: 100%;
-  position: relative;
-  background-color: transparent;
+#destination main #contents .info-container ul {
+  display: flex;
+  gap: 5%;
 }
-#home main .explore-button-wrap .explore-button {
-  background-color: #ffffff;
-  width: 100%;
-  display: block;
-  height: 100%;
-  border-radius: 100%;
-  font-family: "Bellefair", serif;
-  font-size: 2rem;
-  border: none;
+#destination main #contents .info-container li {
+  padding-bottom: 0.7rem;
+  border-bottom: 5px solid transparent;
+  letter-spacing: 0.3rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
-#home main .hovered {
-  background-color: rgba(255, 255, 255, 0.1);
+#destination main #contents .info-container li:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+#destination main #contents .info-container .selected {
+  color: #ffffff;
+  border-color: #ffffff !important;
+}
+#destination main #contents .info-container h1 {
+  font-size: 5rem;
+  font-family: "Bellefair", serif;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+#destination main #contents .info-container p {
+  line-height: 2;
+  font-size: 1.5rem;
+}
+#destination main #contents .info-container .bottom-container {
+  display: flex;
+  gap: 20%;
+}
+#destination main #contents .info-container .bottom-container .sub-info-wrap h5 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+#destination main #contents .info-container .bottom-container .sub-info-wrap h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
 }
 
 /*# sourceMappingURL=destination.css.map */

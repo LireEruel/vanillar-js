@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
 
-#home {
+#destination {
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
   height: 100vh;
@@ -19,52 +19,71 @@
   //   font-family: "Noto Serif KR", serif;
   main {
     position: relative;
-    top: 10%;
-    padding: 7% 24% 0 10%;
+    padding-bottom: 0;
     color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    .contents {
-      width: 33%;
-      h5 {
-        letter-spacing: 4.72px;
-        color: $clr-netural-blue;
-        text-transform: uppercase;
-      }
-      h1 {
-        margin: 2rem 0;
-        font-size: 8.5rem;
-        font-family: "Bellefair", serif;
-      }
-      p {
-        font-family: "Bellefair", serif;
-        color: $clr-netural-blue;
-        font-size: 1.2rem;
-        line-height: 1.5;
+    h3 {
+      letter-spacing: 0.25rem;
+      font-size: 2rem;
+      span {
+        color: $clr-white-25;
+        margin-right: 2%;
       }
     }
-    .explore-button-wrap {
-      width: 25rem;
-      height: 25rem;
-      padding: 5rem;
-      border-radius: 100%;
-      position: relative;
-      background-color: transparent;
-
-      .explore-button {
-        background-color: #ffffff;
-        width: 100%;
-        display: block;
-        height: 100%;
-        border-radius: 100%;
-        font-family: "Bellefair", serif;
-        font-size: 2rem;
-        border: none;
-        cursor: pointer;
+    #contents {
+      padding: 5% 6%;
+      display: flex;
+      justify-content: space-between;
+      color: $clr-netural-blue;
+      img {
+        width: 43%;
       }
-    }
-    .hovered {
-      background-color: $clr-white-10;
+      .info-container {
+        margin-left: 18%;
+        width: 50%;
+        ul {
+          display: flex;
+          gap: 5%;
+        }
+        li {
+          padding-bottom: 0.7rem;
+          border-bottom: 5px solid transparent;
+          letter-spacing: 0.3rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+        li:hover {
+          border-color: $clr-white-50;
+        }
+        .selected {
+          color: $clr-white;
+          border-color: $clr-white !important;
+        }
+        h1 {
+          font-size: 5rem;
+          font-family: "Bellefair", serif;
+          margin: 1rem 0;
+          color: $clr-white;
+        }
+        p {
+          line-height: 2;
+          font-size: 1.5rem;
+        }
+        .bottom-container {
+          display: flex;
+          gap: 20%;
+          .sub-info-wrap {
+            h5 {
+              font-size: 1.2rem;
+              margin: 1rem 0;
+            }
+            h2 {
+              font-size: 2rem;
+              color: $clr-white;
+              font-family: "Bellefair", serif;
+            }
+          }
+        }
+      }
     }
   }
 }
