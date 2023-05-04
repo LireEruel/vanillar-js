@@ -235,6 +235,44 @@ header main {
     background-image: url("../assets/home/background-home-mobile.jpg");
     height: 100%;
   }
+  #home main {
+    flex-direction: column;
+    align-items: center;
+  }
+  #home main .contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  #home main .contents h5 {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 2.7px;
+    margin-top: 2.5rem;
+  }
+  #home main .contents h1 {
+    margin: 2rem 0;
+    font-size: 80px;
+    line-height: 1;
+  }
+  #home main .contents p {
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+    font-family: "Barlow";
+  }
+  #home main .explore-button-wrap {
+    margin-top: 5rem;
+    width: 150px;
+    height: 150px;
+    padding: 0;
+  }
+  #home main .explore-button-wrap button {
+    font-size: 20px !important;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

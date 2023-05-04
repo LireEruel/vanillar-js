@@ -103,5 +103,43 @@
   @include mobile {
     background-image: url("../assets/home/background-home-mobile.jpg");
     height: 100%;
+    main {
+      flex-direction: column;
+      align-items: center;
+      .contents {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        h5 {
+          font-size: 16px;
+          line-height: 1.2;
+          letter-spacing: 2.7px;
+          margin-top: 2.5rem;
+        }
+        h1 {
+          margin: 2rem 0;
+          font-size: 80px;
+          line-height: 1;
+        }
+        p {
+          font-size: 15px;
+          line-height: 1.5;
+          width: 100%;
+          text-align: center;
+          font-family: "Barlow";
+        }
+      }
+      .explore-button-wrap {
+        margin-top: 5rem;
+        width: 150px;
+        height: 150px;
+        padding: 0;
+        button {
+          font-size: 20px !important;
+        }
+      }
+    }
   }
 }
