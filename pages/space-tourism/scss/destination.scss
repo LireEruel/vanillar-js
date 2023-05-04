@@ -6,7 +6,6 @@
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
   min-height: 100vh;
-  height: 100%;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
   //font-family: "Bellefair", serif;
@@ -82,6 +81,11 @@
           }
         }
       }
+    }
+  }
+  @include desktop {
+    main {
+      padding: 5rem 10rem;
     }
   }
   @include tablet {

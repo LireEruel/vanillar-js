@@ -134,7 +134,6 @@ header main {
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
   min-height: 100vh;
-  height: 100%;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -208,6 +207,11 @@ header main {
   color: #ffffff;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  #destination main {
+    padding: 5rem 10rem;
+  }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   #destination main h3 {
