@@ -100,4 +100,8 @@
       }
     }
   }
+  @include mobile {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    height: 100%;
+  }
 }
