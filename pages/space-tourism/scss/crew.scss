@@ -123,4 +123,57 @@
       }
     }
   }
+
+  @include mobile {
+    main {
+      padding: 2rem;
+      h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+      #contents {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .info-container {
+          width: 100% !important;
+          text-align: center;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          border-top: 1px solid $clr-white-10;
+          margin-top: 0;
+          padding-top: 2rem;
+          #role {
+            font-size: 16px;
+            line-height: 1.1;
+            letter-spacing: 0;
+          }
+          #name {
+            font-size: 24px;
+            line-height: 1.1;
+          }
+          #bio {
+            width: 100% !important;
+            font-size: 15px;
+            line-height: 1.5;
+          }
+        }
+        #targetImage {
+          height: 223px;
+          margin-top: 2rem;
+        }
+        #indecators {
+          position: static;
+          width: 88px;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+          li {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
 }

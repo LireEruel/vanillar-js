@@ -252,5 +252,57 @@ header main {
     height: 10px;
   }
 }
+@media (max-width: 767px) {
+  #crew main {
+    padding: 2rem;
+  }
+  #crew main h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  #crew main #contents {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #crew main #contents .info-container {
+    width: 100% !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+  #crew main #contents .info-container #role {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  #crew main #contents .info-container #name {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  #crew main #contents .info-container #bio {
+    width: 100% !important;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  #crew main #contents #targetImage {
+    height: 223px;
+    margin-top: 2rem;
+  }
+  #crew main #contents #indecators {
+    position: static;
+    width: 88px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  #crew main #contents #indecators li {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 /*# sourceMappingURL=crew.css.map */
