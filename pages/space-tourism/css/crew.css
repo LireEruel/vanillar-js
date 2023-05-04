@@ -199,5 +199,58 @@ header main {
 #crew main #contents .info-container ul .selected {
   background-color: #ffffff !important;
 }
+@media (min-width: 1024px) {
+  #crew {
+    overflow: hidden;
+  }
+  #crew main {
+    padding: 5rem 10rem 0rem;
+    height: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  #crew {
+    height: 100%;
+  }
+  #crew main {
+    padding: 5rem 7rem 0rem;
+    height: 100%;
+  }
+  #crew #contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #crew #contents .info-container {
+    width: 100% !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #crew #contents .info-container #role {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  #crew #contents .info-container #name {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+  #crew #contents .info-container #bio {
+    width: 70% !important;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  #crew #contents #indecators {
+    position: static;
+    width: 88px;
+    justify-content: space-between;
+    margin: 3rem auto;
+  }
+  #crew #contents #indecators li {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 /*# sourceMappingURL=crew.css.map */

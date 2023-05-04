@@ -5,15 +5,15 @@ class Crew {
   }
   async render() {
     this.crews = await this.getData();
-    const $indecator = document.querySelector("ul");
+    const $indecator = document.querySelector("#indecators");
     this.crews.forEach((crew, index) => {
       const $li = document.createElement("li");
       $li.addEventListener("click", () => {
-        this.setCrew(crew);
+        this.setCrew(crew, index);
       });
       $indecator.appendChild($li);
     });
-    this.setCrew(this.crews[0]);
+    this.setCrew(this.crews[0], 0);
   }
   async getData() {
     let data;
@@ -26,19 +26,20 @@ class Crew {
     }
     return data;
   }
-  async setCrew(crew) {
+  async setCrew(crew, currentIndex) {
     document.querySelector("#role").textContent = crew.name;
     document.querySelector("#name").textContent = crew.name;
     document.querySelector("#bio").textContent = crew.bio;
     document.querySelector("#targetImage").src = "../" + crew.images.png;
-    const currentIndex = this.crews.findIndex((c) => c.name === crew.name);
-    [...document.querySelector("ul").children].forEach((tab, index) => {
-      if (currentIndex == index) {
-        tab.classList.add("selected");
-      } else {
-        tab.classList.remove("selected");
+    [...document.querySelector("#indecators").children].forEach(
+      (tab, index) => {
+        if (currentIndex == index) {
+          tab.classList.add("selected");
+        } else {
+          tab.classList.remove("selected");
+        }
       }
-    });
+    );
   }
 }
 new Crew();

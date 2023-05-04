@@ -73,4 +73,54 @@
       }
     }
   }
+  @include desktop {
+    overflow: hidden;
+    main {
+      padding: 5rem 10rem 0rem;
+      height: 100%;
+    }
+  }
+  @include tablet {
+    height: 100%;
+    main {
+      padding: 5rem 7rem 0rem;
+      height: 100%;
+    }
+    #contents {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .info-container {
+        width: 100% !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #role {
+          font-size: 24px;
+          line-height: 1.1;
+        }
+        #name {
+          font-size: 40px;
+          line-height: 1.1;
+        }
+        #bio {
+          width: 70% !important;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+      #indecators {
+        position: static;
+        width: 88px;
+        justify-content: space-between;
+        margin: 3rem auto;
+        li {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
 }
