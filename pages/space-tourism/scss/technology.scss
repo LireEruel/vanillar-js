@@ -1,10 +1,13 @@
-@import "./util.scss";
+@import "util.scss";
+@import "common.scss";
 
 #technology {
   background-image: url("../assets/technology/background-technology-desktop.jpg");
   background-size: cover;
   height: 100vh;
+
   main {
+    padding-top: 3rem;
     padding-bottom: 0;
     padding-right: 0;
     color: #ffffff;
@@ -69,6 +72,11 @@
         padding-left: 5rem;
         height: 35rem;
       }
+    }
+  }
+  @include desktop {
+    main {
+      padding-left: 12rem;
     }
   }
 }

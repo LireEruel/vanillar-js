@@ -5,7 +5,7 @@ class technology {
   }
   async render() {
     this.technologies = await this.getData();
-    const $indecator = document.querySelector("ul");
+    const $indecator = document.querySelector("#indecators");
     this.technologies.forEach((technology, index) => {
       const $li = document.createElement("li");
       $li.textContent = index + 1;
@@ -32,13 +32,15 @@ class technology {
     document.querySelector("#description").textContent = technology.description;
     document.querySelector("#targetImage").src =
       "../" + technology.images.portrait;
-    [...document.querySelector("ul").children].forEach((tab, index) => {
-      if (currentIndex == index) {
-        tab.classList.add("selected");
-      } else {
-        tab.classList.remove("selected");
+    [...document.querySelector("#indecators").children].forEach(
+      (tab, index) => {
+        if (currentIndex == index) {
+          tab.classList.add("selected");
+        } else {
+          tab.classList.remove("selected");
+        }
       }
-    });
+    );
   }
 }
 new technology();
