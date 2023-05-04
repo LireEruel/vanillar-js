@@ -63,7 +63,9 @@
     }
   }
   @include desktop {
-    padding-right: 24%;
+    main {
+      padding-right: 24%;
+    }
   }
   @include tablet {
     background-image: url("../assets/home/background-home-tablet.jpg");
