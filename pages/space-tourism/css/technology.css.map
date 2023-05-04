@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"technology.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/technology.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;AAQA;EACE;EACA;;AACA;EACE;EACA;;AACA;EACE,OAVS;EAWT","file":"technology.css"}

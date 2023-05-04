@@ -13,7 +13,6 @@ class Crew {
       });
       $indecator.appendChild($li);
     });
-    console.log($indecator);
     this.setCrew(this.crews[0]);
   }
   async getData() {
