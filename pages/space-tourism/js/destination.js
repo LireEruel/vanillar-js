@@ -4,6 +4,12 @@ class Destination {
     this.destinations = [];
   }
   async render() {
+    const linkList = document.querySelector("ul");
+    [...linkList.children].forEach((elem) => {
+      if (elem.textContent == "DESTINATION") {
+        elem.firstChild.classList.add("selected");
+      }
+    });
     this.destinations = await this.getData();
     const $tabs = document.querySelector("#tabs");
     this.destinations.forEach((destination, index) => {

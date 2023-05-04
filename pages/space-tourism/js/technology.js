@@ -4,6 +4,12 @@ class technology {
     this.technologies = [];
   }
   async render() {
+    const linkList = document.querySelector("ul");
+    [...linkList.children].forEach((elem) => {
+      if (elem.textContent == "TECHNOLOGY") {
+        elem.firstChild.classList.add("selected");
+      }
+    });
     this.technologies = await this.getData();
     const $indecator = document.querySelector("#indecators");
     this.technologies.forEach((technology, index) => {

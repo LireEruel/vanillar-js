@@ -4,6 +4,12 @@ class Crew {
     this.crews = [];
   }
   async render() {
+    const linkList = document.querySelector("ul");
+    [...linkList.children].forEach((elem) => {
+      if (elem.textContent == "CREW") {
+        elem.firstChild.classList.add("selected");
+      }
+    });
     this.crews = await this.getData();
     const $indecator = document.querySelector("#indecators");
     this.crews.forEach((crew, index) => {
