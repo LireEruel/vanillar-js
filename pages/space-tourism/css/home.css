@@ -90,7 +90,11 @@ header main {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   header {
+    height: 96px;
     padding-left: 49px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
   }
   header img {
     height: 48px;
