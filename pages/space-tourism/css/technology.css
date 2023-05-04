@@ -200,16 +200,21 @@ header main {
 }
 #technology main #contents #targetImage {
   padding-left: 5rem;
-  height: 35rem;
+  height: 46rem;
 }
 @media (min-width: 1024px) {
   #technology main {
     padding-left: 12rem;
   }
+  #technology main .text-contents-wrap {
+    display: flex;
+    gap: 5rem;
+  }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   #technology {
     height: 100%;
+    min-height: 100vh;
   }
   #technology main {
     padding-bottom: 10%;
@@ -231,6 +236,11 @@ header main {
   }
   #technology main #contents .text-contents-wrap {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,6 +268,67 @@ header main {
     font-size: 16px;
     width: 50%;
     line-height: 2;
+  }
+}
+@media (max-width: 767px) {
+  #technology {
+    height: 100%;
+    min-height: 100vh;
+  }
+  #technology main {
+    padding-bottom: 10%;
+    height: 100%;
+  }
+  #technology main h3 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  #technology main #contents {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #technology main #contents #targetImage {
+    padding-left: 0;
+    height: 170px;
+    box-sizing: content-box;
+    margin: 3rem 0;
+    object-fit: cover;
+  }
+  #technology main #contents .text-contents-wrap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap #indecators {
+    flex-direction: row;
+    width: 152px;
+    margin-bottom: 2rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+  #technology main #contents .text-contents-wrap #indecators li {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  #technology main #contents .text-contents-wrap h5 {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+  #technology main #contents .text-contents-wrap #name {
+    font-size: 24px;
+  }
+  #technology main #contents .text-contents-wrap #description {
+    font-size: 15px;
+    width: 80%;
+    line-height: 25px;
   }
 }
 
