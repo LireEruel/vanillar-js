@@ -11,20 +11,33 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="../../../boilerplate.css" />
-    <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../css/destination.css" />
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body id="destination">
     <header>
       <img src="../assets/shared/logo.svg" alt="logo image" />
+      <button>
+        <img
+          src="../assets/shared/icon-hamburger.svg"
+          alt="hamburger-menu-icon"
+        />
+      </button>
       <nav>
-        <a href="../index.html"><span>00</span>HOME</a>
-        <a href="./destination.html" class="selected"
-          ><span>01</span>DESTINATION</a
-        >
-        <a href="./crew.html"><span>02</span>CREW</a>
-        <a href="./technology.html"><span>03</span>TECHNOLOGY</a>
+        <ul>
+          <li>
+            <a href="" class="selected">HOME</a>
+          </li>
+          <li>
+            <a href="../pages/destination.html">DESTINATION</a>
+          </li>
+          <li>
+            <a href="../pages/crew.html">CREW</a>
+          </li>
+          <li>
+            <a href="../pages/technology.html">TECHNOLOGY</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -36,7 +49,7 @@
           alt="image-moon"
         />
         <div class="info-container">
-          <ul></ul>
+          <ul id="tabs"></ul>
           <h1></h1>
           <p></p>
           <hr />

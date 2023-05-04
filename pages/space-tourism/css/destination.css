@@ -5,10 +5,136 @@
 /*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
 /*반응형, 브라우저 크기가 1024px 이상일때*/
 /*넓이, 높이 자동 계산함수*/
+body {
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 12%;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  display: none;
+}
+header nav {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  width: 60%;
+  padding-left: 8%;
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+header nav li {
+  height: 100%;
+}
+header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2.7px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 3px solid transparent;
+}
+header nav a span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+header nav .selected {
+  border-color: #ffffff !important;
+}
+header main {
+  padding: 5% 8%;
+  height: 88%;
+}
+
+@media (min-width: 1024px) {
+  header {
+    border-top: 40px solid transparent;
+    border-left: 55px solid transparent;
+  }
+  header ul {
+    counter-reset: list-number;
+  }
+  header ul a {
+    counter-increment: list-number;
+  }
+  header ul a::before {
+    content: "0" counter(list-number);
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  header nav::before {
+    content: "";
+    width: 55%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    right: 98%;
+    top: 50%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  header {
+    height: 96px;
+    padding-left: 49px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding-top: 24px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+  header nav {
+    display: none;
+  }
+  header button {
+    display: block;
+    background: transparent;
+    border: none;
+    height: 40px;
+  }
+  header button img {
+    width: 24px;
+    height: 21px;
+  }
+}
 #destination {
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -75,12 +201,63 @@
 #destination main #contents .info-container .bottom-container .sub-info-wrap h5 {
   font-size: 1.2rem;
   margin: 1rem 0;
+  color: #d0d6f9;
 }
 #destination main #contents .info-container .bottom-container .sub-info-wrap h2 {
   font-size: 2rem;
   color: #ffffff;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  #destination main #contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  #destination main #contents #targetImage {
+    width: 300px;
+    height: 300px;
+    margin: 3rem auto;
+  }
+  #destination main #contents .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
+  #destination main #contents .info-container ul {
+    justify-content: space-around;
+    width: 60%;
+  }
+  #destination main #contents .info-container ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 2.7px;
+  }
+  #destination main #contents .info-container h1 {
+    margin-top: 2rem;
+  }
+  #destination main #contents .info-container p {
+    font-family: "Barlow";
+    font-size: 16px;
+  }
+  #destination main #contents .bottom-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+    padding-top: 5%;
+    margin-top: 5%;
+  }
+  #destination main #contents .bottom-container .sub-info-wrap h5 {
+    font-size: 14px;
+  }
+  #destination main #contents .bottom-container .sub-info-wrap h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
 }
 
 /*# sourceMappingURL=destination.css.map */
