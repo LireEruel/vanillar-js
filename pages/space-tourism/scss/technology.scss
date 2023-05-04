@@ -1,14 +1,9 @@
+@import "./util.scss";
+
 #technology {
   background-image: url("../assets/technology/background-technology-desktop.jpg");
   background-size: cover;
   height: 100vh;
-  $clr-black: #0b0d17;
-  $clr-netural-blue: #d0d6f9;
-  $clr-white: #ffffff;
-  $clr-white-10: rgba(255, 255, 255, 0.1);
-  $clr-white-25: rgba(255, 255, 255, 0.25);
-  $clr-white-50: rgba(255, 255, 255, 0.5);
-  $clr-grey: #979797;
   main {
     padding-bottom: 0;
     padding-right: 0;

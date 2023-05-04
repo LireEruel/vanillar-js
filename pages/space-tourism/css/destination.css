@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@charset "UTF-8";
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
 #destination {
   background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
