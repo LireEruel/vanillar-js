@@ -1,0 +1,41 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 57 | / @include desktop {
+ * 58 | |   header {
+ * 59 | |     border-top: 40px solid transparent;
+ * 60 | |     border-left: 55px solid transparent;
+ * 61 | |     ul {
+ * 62 | |       counter-reset: list-number;
+ * 63 | |       a {
+ * 64 | |         counter-increment: list-number;
+ * 65 | |       }
+ * 66 | |       a::before {
+ * 67 | |         content: "0" counter(list-number);
+ * 68 | |         font-weight: bold;
+ * 69 | |         margin-right: 12px;
+ * 70 | |       }
+ * 71 | |     }
+ * 72 | | 
+ * 73 | |     nav::before {
+ * 74 | |       content: "";
+ * 75 | |       width: 55%;
+ * 76 | |       height: 1px;
+ * 77 | |       background-color: rgba(255, 255, 255, 0.25);
+ * 78 | |       position: absolute;
+ * 79 | |       right: 98%;
+ * 80 | |     }
+ * 81 | |   }
+ * 82 | \ }
+ *    '
+ *   scss\common.scss 57:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined mixin.\a    \2577 \a 57 \2502  \250c  @include desktop {\a 58 \2502  \2502    header {\a 59 \2502  \2502      border-top: 40px solid transparent;\a 60 \2502  \2502      border-left: 55px solid transparent;\a 61 \2502  \2502      ul {\a 62 \2502  \2502        counter-reset: list-number;\a 63 \2502  \2502        a {\a 64 \2502  \2502          counter-increment: list-number;\a 65 \2502  \2502        }\a 66 \2502  \2502        a::before {\a 67 \2502  \2502          content: "0" counter(list-number);\a 68 \2502  \2502          font-weight: bold;\a 69 \2502  \2502          margin-right: 12px;\a 70 \2502  \2502        }\a 71 \2502  \2502      }\a 72 \2502  \2502  \a 73 \2502  \2502      nav::before {\a 74 \2502  \2502        content: "";\a 75 \2502  \2502        width: 55%;\a 76 \2502  \2502        height: 1px;\a 77 \2502  \2502        background-color: rgba(255, 255, 255, 0.25);\a 78 \2502  \2502        position: absolute;\a 79 \2502  \2502        right: 98%;\a 80 \2502  \2502      }\a 81 \2502  \2502    }\a 82 \2502  \2514  }\a    \2575 \a   scss\\common.scss 57:1  root stylesheet';
+}
