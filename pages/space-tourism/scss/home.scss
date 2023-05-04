@@ -6,7 +6,7 @@
 #home {
   background-image: url("../assets/home/background-home-desktop.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: block;
   font-family: "Barlow Condensed", sans-serif;
   //font-family: "Bellefair", serif;
@@ -14,7 +14,7 @@
   main {
     position: relative;
     top: 10%;
-    padding: 7% 24% 0 10%;
+    padding: 7% 10%;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,42 @@
       background-color: $clr-white-10;
     }
   }
+  @include desktop {
+    padding-right: 24%;
+  }
   @include tablet {
     background-image: url("../assets/home/background-home-tablet.jpg");
+    height: 100%;
+    main {
+      flex-direction: column;
+      align-items: center;
+      .contents {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        h5 {
+          font-size: 20px;
+          line-height: 1.2;
+          letter-spacing: 3.38px;
+        }
+        h1 {
+          margin: 1rem 0;
+          font-size: 150px;
+          line-height: 1;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          width: 80%;
+        }
+      }
+      .explore-button-wrap {
+        margin-top: 10rem;
+        width: 22rem;
+        height: 22rem;
+      }
+    }
   }
 }
