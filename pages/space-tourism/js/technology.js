@@ -10,11 +10,11 @@ class technology {
       const $li = document.createElement("li");
       $li.textContent = index + 1;
       $li.addEventListener("click", () => {
-        this.setTechnology(technology);
+        this.setTechnology(technology, index);
       });
       $indecator.appendChild($li);
     });
-    this.setTechnology(this.technologies[0]);
+    this.setTechnology(this.technologies[0], 0);
   }
   async getData() {
     let data;
@@ -27,14 +27,11 @@ class technology {
     }
     return data;
   }
-  setTechnology(technology) {
+  setTechnology(technology, currentIndex) {
     document.querySelector("#name").textContent = technology.name;
     document.querySelector("#description").textContent = technology.description;
     document.querySelector("#targetImage").src =
       "../" + technology.images.portrait;
-    const currentIndex = this.technologies.findIndex(
-      (c) => c.name === technology.name
-    );
     [...document.querySelector("ul").children].forEach((tab, index) => {
       if (currentIndex == index) {
         tab.classList.add("selected");

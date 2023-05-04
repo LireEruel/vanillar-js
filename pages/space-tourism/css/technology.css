@@ -5,6 +5,7 @@
 }
 #technology main {
   padding-bottom: 0;
+  padding-right: 0;
   color: #ffffff;
 }
 #technology main h3 {
@@ -14,6 +15,59 @@
 #technology main h3 span {
   color: rgba(255, 255, 255, 0.25);
   margin-right: 2%;
+}
+#technology main #contents {
+  display: flex;
+  gap: 5%;
+}
+#technology main #contents ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#technology main #contents ul li {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 2rem;
+  font-family: "Bellefair", serif;
+}
+#technology main #contents ul li:hover {
+  border: 2px solid #ffffff;
+}
+#technology main #contents ul .selected {
+  background-color: #ffffff;
+  color: #0b0d17;
+}
+#technology main #contents .text-contents-wrap {
+  margin: auto;
+  color: #d0d6f9;
+}
+#technology main #contents .text-contents-wrap h5 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem;
+}
+#technology main #contents .text-contents-wrap #name {
+  font-family: "Bellefair", serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  margin-left: 0.5rem;
+}
+#technology main #contents .text-contents-wrap #description {
+  font-size: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 3rem;
+}
+#technology main #contents #targetImage {
+  padding-left: 5rem;
+  height: 35rem;
 }
 
 /*# sourceMappingURL=technology.css.map */
