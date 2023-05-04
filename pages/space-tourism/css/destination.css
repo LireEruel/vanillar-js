@@ -157,7 +157,8 @@ header main {
   color: #d0d6f9;
 }
 #destination main #contents img {
-  width: 43%;
+  width: 30rem;
+  height: 30rem;
 }
 #destination main #contents .info-container {
   margin-left: 18%;
