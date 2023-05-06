@@ -35,9 +35,11 @@ header nav ul {
   align-items: center;
   gap: 5%;
   height: 100%;
+  counter-reset: list-number;
 }
 header nav li {
   height: 100%;
+  counter-increment: list-number;
 }
 header nav a {
   text-decoration: none;
@@ -51,6 +53,11 @@ header nav a {
   border-bottom: 3px solid transparent;
 }
 header nav a span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a::before {
+  content: "0" counter(list-number);
   font-weight: bold;
   margin-right: 12px;
 }
@@ -69,17 +76,6 @@ header main {
   header {
     border-top: 40px solid transparent;
     border-left: 55px solid transparent;
-  }
-  header ul {
-    counter-reset: list-number;
-  }
-  header ul a {
-    counter-increment: list-number;
-  }
-  header ul a::before {
-    content: "0" counter(list-number);
-    font-weight: bold;
-    margin-right: 12px;
   }
   header nav::before {
     content: "";
@@ -102,6 +98,9 @@ header main {
   header img {
     height: 48px;
     width: 48px;
+  }
+  header a::before {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -129,6 +128,47 @@ header main {
   header button img {
     width: 24px;
     height: 21px;
+  }
+  header .close-btn {
+    display: none;
+  }
+  .sidebar-mode {
+    position: relative;
+  }
+  .sidebar-mode .hamburger-btn {
+    display: none;
+  }
+  .sidebar-mode nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65%;
+    box-sizing: border-box;
+    z-index: 70;
+  }
+  .sidebar-mode nav ul {
+    flex-direction: column;
+    height: 30%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .sidebar-mode nav li {
+    width: 100%;
+  }
+  .sidebar-mode nav a {
+    border-bottom: 0px;
+    border-right: 3px solid transparent;
+    width: 100%;
+  }
+  .sidebar-mode nav .selected {
+    border-color: #ffffff !important;
+  }
+  .sidebar-mode nav .close-btn {
+    display: block !important;
+    float: right;
+    margin: 33px;
   }
 }
 #destination {

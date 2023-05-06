@@ -26,9 +26,11 @@ header {
       align-items: center;
       gap: 5%;
       height: 100%;
+      counter-reset: list-number;
     }
     li {
       height: 100%;
+      counter-increment: list-number;
     }
     a {
       text-decoration: none;
@@ -44,6 +46,11 @@ header {
         font-weight: bold;
         margin-right: 12px;
       }
+    }
+    a::before {
+      content: "0" counter(list-number);
+      font-weight: bold;
+      margin-right: 12px;
     }
     a:hover {
       border-color: rgba(255, 255, 255, 0.5);
@@ -62,19 +69,6 @@ header {
   header {
     border-top: 40px solid transparent;
     border-left: 55px solid transparent;
-
-    ul {
-      counter-reset: list-number;
-      a {
-        counter-increment: list-number;
-      }
-      a::before {
-        content: "0" counter(list-number);
-        font-weight: bold;
-        margin-right: 12px;
-      }
-    }
-
     nav::before {
       content: "";
       width: 55%;
@@ -98,6 +92,9 @@ header {
       height: 48px;
       width: 48px;
     }
+    a::before {
+      display: none;
+    }
   }
 }
 
@@ -112,6 +109,7 @@ header {
       height: 40px;
       width: 40px;
     }
+
     nav {
       display: none;
     }
@@ -124,6 +122,48 @@ header {
       img {
         width: 24px;
         height: 21px;
+      }
+    }
+    .close-btn {
+      display: none;
+    }
+  }
+  .sidebar-mode {
+    position: relative;
+    .hamburger-btn {
+      display: none;
+    }
+
+    nav {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 65%;
+      box-sizing: border-box;
+      z-index: 70;
+      ul {
+        flex-direction: column;
+        height: 30%;
+        text-align: left;
+        align-items: flex-start;
+      }
+      li {
+        width: 100%;
+      }
+      a {
+        border-bottom: 0px;
+        border-right: 3px solid transparent;
+        width: 100%;
+      }
+      .selected {
+        border-color: #ffffff !important;
+      }
+      .close-btn {
+        display: block !important;
+        float: right;
+        margin: 33px;
       }
     }
   }

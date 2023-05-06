@@ -1,35 +1,22 @@
 /* Error: Undefined mixin.
  *    ,
- * 61 | / @include desktop {
- * 62 | |   header {
- * 63 | |     border-top: 40px solid transparent;
- * 64 | |     border-left: 55px solid transparent;
- * 65 | | 
- * 66 | |     ul {
- * 67 | |       counter-reset: list-number;
- * 68 | |       a {
- * 69 | |         counter-increment: list-number;
- * 70 | |       }
- * 71 | |       a::before {
- * 72 | |         content: "0" counter(list-number);
- * 73 | |         font-weight: bold;
- * 74 | |         margin-right: 12px;
- * 75 | |       }
- * 76 | |     }
- * 77 | | 
- * 78 | |     nav::before {
- * 79 | |       content: "";
- * 80 | |       width: 55%;
- * 81 | |       height: 1px;
- * 82 | |       background-color: rgba(255, 255, 255, 0.25);
- * 83 | |       position: absolute;
- * 84 | |       right: 98%;
- * 85 | |       top: 50%;
- * 86 | |     }
- * 87 | |   }
- * 88 | \ }
+ * 68 | / @include desktop {
+ * 69 | |   header {
+ * 70 | |     border-top: 40px solid transparent;
+ * 71 | |     border-left: 55px solid transparent;
+ * 72 | |     nav::before {
+ * 73 | |       content: "";
+ * 74 | |       width: 55%;
+ * 75 | |       height: 1px;
+ * 76 | |       background-color: rgba(255, 255, 255, 0.25);
+ * 77 | |       position: absolute;
+ * 78 | |       right: 98%;
+ * 79 | |       top: 50%;
+ * 80 | |     }
+ * 81 | |   }
+ * 82 | \ }
  *    '
- *   scss\common.scss 61:1  root stylesheet */
+ *   scss\common.scss 68:1  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -39,5 +26,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Undefined mixin.\a    \2577 \a 61 \2502  \250c  @include desktop {\a 62 \2502  \2502    header {\a 63 \2502  \2502      border-top: 40px solid transparent;\a 64 \2502  \2502      border-left: 55px solid transparent;\a 65 \2502  \2502  \a 66 \2502  \2502      ul {\a 67 \2502  \2502        counter-reset: list-number;\a 68 \2502  \2502        a {\a 69 \2502  \2502          counter-increment: list-number;\a 70 \2502  \2502        }\a 71 \2502  \2502        a::before {\a 72 \2502  \2502          content: "0" counter(list-number);\a 73 \2502  \2502          font-weight: bold;\a 74 \2502  \2502          margin-right: 12px;\a 75 \2502  \2502        }\a 76 \2502  \2502      }\a 77 \2502  \2502  \a 78 \2502  \2502      nav::before {\a 79 \2502  \2502        content: "";\a 80 \2502  \2502        width: 55%;\a 81 \2502  \2502        height: 1px;\a 82 \2502  \2502        background-color: rgba(255, 255, 255, 0.25);\a 83 \2502  \2502        position: absolute;\a 84 \2502  \2502        right: 98%;\a 85 \2502  \2502        top: 50%;\a 86 \2502  \2502      }\a 87 \2502  \2502    }\a 88 \2502  \2514  }\a    \2575 \a   scss\\common.scss 61:1  root stylesheet';
+  content: 'Error: Undefined mixin.\a    \2577 \a 68 \2502  \250c  @include desktop {\a 69 \2502  \2502    header {\a 70 \2502  \2502      border-top: 40px solid transparent;\a 71 \2502  \2502      border-left: 55px solid transparent;\a 72 \2502  \2502      nav::before {\a 73 \2502  \2502        content: "";\a 74 \2502  \2502        width: 55%;\a 75 \2502  \2502        height: 1px;\a 76 \2502  \2502        background-color: rgba(255, 255, 255, 0.25);\a 77 \2502  \2502        position: absolute;\a 78 \2502  \2502        right: 98%;\a 79 \2502  \2502        top: 50%;\a 80 \2502  \2502      }\a 81 \2502  \2502    }\a 82 \2502  \2514  }\a    \2575 \a   scss\\common.scss 68:1  root stylesheet';
 }
