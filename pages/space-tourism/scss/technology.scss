@@ -25,7 +25,7 @@
       ul {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         li {
           border: 1px solid $clr-white-25;
           display: flex;
@@ -69,7 +69,6 @@
         }
       }
       #targetImage {
-        padding-left: 5rem;
         height: 46rem;
       }
     }
@@ -80,6 +79,9 @@
       .text-contents-wrap {
         display: flex;
         gap: 5rem;
+      }
+      ul {
+        height: 25rem;
       }
     }
   }

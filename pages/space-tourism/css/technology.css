@@ -197,7 +197,7 @@ header main {
 #technology main #contents ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 #technology main #contents ul li {
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -240,7 +240,6 @@ header main {
   line-height: 3rem;
 }
 #technology main #contents #targetImage {
-  padding-left: 5rem;
   height: 46rem;
 }
 @media (min-width: 1024px) {
@@ -250,6 +249,9 @@ header main {
   #technology main .text-contents-wrap {
     display: flex;
     gap: 5rem;
+  }
+  #technology main ul {
+    height: 25rem;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
