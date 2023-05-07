@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../../../boilerplate.css" />
+    <link rel="stylesheet" href="../css/destination.css" />
+    <script
+      type="text/javascript"
+      src="../components/ReactableHeader.js"
+    ></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body id="destination">
+    <reactable-header></reactable-header>
+    <main>
+      <h3><span>01</span> PICK YOUR DESTINATION</h3>
+      <div id="contents">
+        <img
+          id="targetImage"
+          src="../assets/destination/image-moon.png"
+          alt="image-moon"
+        />
+        <div class="info-container">
+          <ul id="tabs"></ul>
+          <h1></h1>
+          <p></p>
+          <hr />
+          <div class="bottom-container">
+            <div class="sub-info-wrap">
+              <h5>AVG. DISTANCE</h5>
+              <h2 id="distance">384,400KM</h2>
+            </div>
+            <div class="sub-info-wrap">
+              <h5>EST. TRAVEL TIME</h5>
+              <h2 id="travel">3 DAYS</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../js/destination.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+//sass --watch scss:css
+@import "./util.scss";
+@import "./common.scss";
+
+#crew {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: block;
+
+  font-family: "Barlow Condensed", sans-serif;
+  //font-family: "Bellefair", serif;
+  //   font-family: "Noto Serif KR", serif;
+  main {
+    padding-bottom: 0;
+    color: #ffffff;
+    overflow: hidden;
+    h3 {
+      letter-spacing: 0.25rem;
+      font-size: 2rem;
+      span {
+        color: $clr-white-25;
+        margin-right: 2%;
+      }
+    }
+    #contents {
+      display: flex;
+      color: $clr-netural-blue;
+      height: 100%;
+      img {
+        height: auto;
+      }
+      .info-container {
+        width: 50%;
+        margin-top: 10%;
+        #role {
+          color: $clr-white-50;
+          text-transform: uppercase;
+          font-family: "Bellefair", serif;
+        }
+        #name {
+          font-size: 4rem;
+          font-family: "Bellefair", serif;
+          margin: 1rem 0;
+          color: $clr-white;
+          text-transform: uppercase;
+        }
+        p {
+          line-height: 1.5;
+          font-size: 1.5rem;
+          width: 60%;
+        }
+        ul {
+          display: flex;
+          gap: 5%;
+          position: absolute;
+          bottom: 10%;
+          width: 15%;
+          li {
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            background-color: $clr-white-10;
+            border-radius: 1rem;
+          }
+          li:hover {
+            background-color: $clr-white-50;
+          }
+          .selected {
+            background-color: $clr-white !important;
+          }
+        }
+      }
+    }
+  }
+  @include desktop {
+    overflow: hidden;
+    main {
+      padding: 5rem 10rem 0rem;
+      height: 100%;
+    }
+  }
+  @include tablet {
+    height: 100%;
+    main {
+      padding: 5rem 7rem 0rem;
+      height: 100%;
+    }
+    #contents {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .info-container {
+        width: 100% !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #role {
+          font-size: 24px;
+          line-height: 1.1;
+        }
+        #name {
+          font-size: 40px;
+          line-height: 1.1;
+        }
+        #bio {
+          width: 70% !important;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+      #indecators {
+        position: static;
+        width: 88px;
+        justify-content: space-between;
+        margin: 3rem auto;
+        li {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    main {
+      padding: 2rem;
+      h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+      #contents {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .info-container {
+          width: 100% !important;
+          text-align: center;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          border-top: 1px solid $clr-white-10;
+          margin-top: 0;
+          padding-top: 2rem;
+          #role {
+            font-size: 16px;
+            line-height: 1.1;
+            letter-spacing: 0;
+          }
+          #name {
+            font-size: 24px;
+            line-height: 1.1;
+          }
+          #bio {
+            width: 100% !important;
+            font-size: 15px;
+            line-height: 1.5;
+          }
+        }
+        #targetImage {
+          height: 223px;
+          margin-top: 2rem;
+        }
+        #indecators {
+          position: static;
+          width: 88px;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+          li {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

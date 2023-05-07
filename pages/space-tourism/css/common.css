@@ -1,0 +1,30 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 68 | / @include desktop {
+ * 69 | |   header {
+ * 70 | |     border-top: 40px solid transparent;
+ * 71 | |     border-left: 55px solid transparent;
+ * 72 | |     nav::before {
+ * 73 | |       content: "";
+ * 74 | |       width: 55%;
+ * 75 | |       height: 1px;
+ * 76 | |       background-color: rgba(255, 255, 255, 0.25);
+ * 77 | |       position: absolute;
+ * 78 | |       right: 98%;
+ * 79 | |       top: 50%;
+ * 80 | |     }
+ * 81 | |   }
+ * 82 | \ }
+ *    '
+ *   scss\common.scss 68:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined mixin.\a    \2577 \a 68 \2502  \250c  @include desktop {\a 69 \2502  \2502    header {\a 70 \2502  \2502      border-top: 40px solid transparent;\a 71 \2502  \2502      border-left: 55px solid transparent;\a 72 \2502  \2502      nav::before {\a 73 \2502  \2502        content: "";\a 74 \2502  \2502        width: 55%;\a 75 \2502  \2502        height: 1px;\a 76 \2502  \2502        background-color: rgba(255, 255, 255, 0.25);\a 77 \2502  \2502        position: absolute;\a 78 \2502  \2502        right: 98%;\a 79 \2502  \2502        top: 50%;\a 80 \2502  \2502      }\a 81 \2502  \2502    }\a 82 \2502  \2514  }\a    \2575 \a   scss\\common.scss 68:1  root stylesheet';
+}

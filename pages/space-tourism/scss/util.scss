@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+
+$clr-black: #0b0d17;
+$clr-netural-blue: #d0d6f9;
+$clr-white: #ffffff;
+$clr-white-10: rgba(255, 255, 255, 0.1);
+$clr-white-25: rgba(255, 255, 255, 0.25);
+$clr-white-50: rgba(255, 255, 255, 0.5);
+$clr-grey: #979797;
+/*반응형 화면 크기*/
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+@mixin tablet {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}

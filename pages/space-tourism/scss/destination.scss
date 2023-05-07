@@ -1,0 +1,211 @@
+//sass --watch scss:css
+@import "./util.scss";
+@import "./common.scss";
+
+#destination {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  //font-family: "Bellefair", serif;
+  //   font-family: "Noto Serif KR", serif;
+  main {
+    position: relative;
+    padding-bottom: 0;
+    color: #ffffff;
+    h3 {
+      letter-spacing: 0.25rem;
+      font-size: 2rem;
+      span {
+        color: $clr-white-25;
+        margin-right: 2%;
+      }
+    }
+    #contents {
+      padding: 5% 6%;
+      display: flex;
+      justify-content: space-between;
+      color: $clr-netural-blue;
+      img {
+        width: 30rem;
+        height: 30rem;
+      }
+      .info-container {
+        margin-left: 18%;
+        width: 50%;
+        ul {
+          display: flex;
+          gap: 5%;
+        }
+        li {
+          padding-bottom: 0.7rem;
+          border-bottom: 5px solid transparent;
+          letter-spacing: 0.3rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+        li:hover {
+          border-color: $clr-white-50;
+        }
+        .selected {
+          color: $clr-white;
+          border-color: $clr-white !important;
+        }
+        h1 {
+          font-size: 5rem;
+          font-family: "Bellefair", serif;
+          margin: 1rem 0;
+          color: $clr-white;
+          text-transform: uppercase;
+        }
+        p {
+          line-height: 2;
+          font-size: 1.5rem;
+        }
+        .bottom-container {
+          display: flex;
+          gap: 20%;
+          .sub-info-wrap {
+            h5 {
+              font-size: 1.2rem;
+              margin: 1rem 0;
+              color: $clr-netural-blue;
+            }
+            h2 {
+              font-size: 2rem;
+              color: $clr-white;
+              font-family: "Bellefair", serif;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include desktop {
+    main {
+      padding: 5rem 10rem;
+    }
+  }
+  @include tablet {
+    main {
+      h3 {
+        margin-top: 3rem;
+      }
+      #contents {
+        flex-direction: column;
+        align-items: center;
+        #targetImage {
+          width: 300px;
+          height: 300px;
+          margin: 3rem auto;
+        }
+        .info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          text-align: center;
+          width: 80%;
+          ul {
+            justify-content: space-around;
+            width: 60%;
+            li {
+              font-size: 16px;
+              line-height: 1.5;
+              letter-spacing: 2.7px;
+            }
+          }
+          h1 {
+            margin-top: 2rem;
+          }
+          p {
+            font-family: "Barlow";
+            font-size: 16px;
+          }
+        }
+        .bottom-container {
+          border-top: 1px solid $clr-white-10;
+          width: 100%;
+          gap: 0;
+          justify-content: center;
+          padding-top: 5%;
+          margin-top: 5%;
+          .sub-info-wrap {
+            h5 {
+              font-size: 14px;
+            }
+            h2 {
+              font-size: 28px;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mobile {
+    main {
+      h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      #contents {
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 170px;
+          height: 170px;
+          margin: 2rem auto;
+        }
+        .info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          text-align: center;
+          width: 100%;
+          ul {
+            justify-content: space-around;
+            width: 80%;
+            li {
+              font-size: 16px;
+              line-height: 1.5;
+              letter-spacing: 2.7px;
+            }
+          }
+          h1 {
+            margin-top: 2rem;
+            font-size: 56px;
+          }
+          p {
+            font-family: "Barlow";
+            font-size: 15px;
+            line-height: 25px;
+          }
+          .bottom-container {
+            border-top: 1px solid $clr-white-10;
+            width: 100%;
+            gap: 0;
+            justify-content: center;
+            padding-top: 5%;
+            margin-top: 5%;
+            flex-direction: column;
+            .sub-info-wrap {
+              h5 {
+                font-size: 14px;
+              }
+              h2 {
+                font-size: 28px;
+                line-height: 1.4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

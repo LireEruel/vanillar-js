@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+body {
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 12%;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  display: none;
+}
+header nav {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  width: 60%;
+  padding-left: 8%;
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+  counter-reset: list-number;
+}
+header nav li {
+  height: 100%;
+  counter-increment: list-number;
+}
+header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2.7px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 3px solid transparent;
+}
+header nav a span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a::before {
+  content: "0" counter(list-number);
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+header nav .selected {
+  border-color: #ffffff !important;
+}
+header main {
+  padding: 5% 8%;
+  height: 88%;
+}
+
+@media (min-width: 1024px) {
+  header {
+    border-top: 40px solid transparent;
+    border-left: 55px solid transparent;
+  }
+  header nav::before {
+    content: "";
+    width: 55%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    right: 98%;
+    top: 50%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  header {
+    height: 96px;
+    padding-left: 49px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 48px;
+    width: 48px;
+  }
+  header a::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding-top: 24px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+  header nav {
+    display: none;
+  }
+  header button {
+    display: block;
+    background: transparent;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+  }
+  header button img {
+    width: 24px;
+    height: 21px;
+  }
+  header .close-btn {
+    display: none;
+  }
+  .sidebar-mode {
+    position: relative;
+  }
+  .sidebar-mode .hamburger-btn {
+    display: none;
+  }
+  .sidebar-mode nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65%;
+    box-sizing: border-box;
+    z-index: 70;
+  }
+  .sidebar-mode nav ul {
+    flex-direction: column;
+    height: 30%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .sidebar-mode nav li {
+    width: 100%;
+  }
+  .sidebar-mode nav a {
+    border-bottom: 0px;
+    border-right: 3px solid transparent;
+    width: 100%;
+  }
+  .sidebar-mode nav .selected {
+    border-color: #ffffff !important;
+  }
+  .sidebar-mode nav .close-btn {
+    display: block !important;
+    float: right;
+    margin: 33px;
+  }
+}
+#crew {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+}
+#crew main {
+  padding-bottom: 0;
+  color: #ffffff;
+  overflow: hidden;
+}
+#crew main h3 {
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
+#crew main h3 span {
+  color: rgba(255, 255, 255, 0.25);
+  margin-right: 2%;
+}
+#crew main #contents {
+  display: flex;
+  color: #d0d6f9;
+  height: 100%;
+}
+#crew main #contents img {
+  height: auto;
+}
+#crew main #contents .info-container {
+  width: 50%;
+  margin-top: 10%;
+}
+#crew main #contents .info-container #role {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+}
+#crew main #contents .info-container #name {
+  font-size: 4rem;
+  font-family: "Bellefair", serif;
+  margin: 1rem 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+#crew main #contents .info-container p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  width: 60%;
+}
+#crew main #contents .info-container ul {
+  display: flex;
+  gap: 5%;
+  position: absolute;
+  bottom: 10%;
+  width: 15%;
+}
+#crew main #contents .info-container ul li {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+#crew main #contents .info-container ul li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#crew main #contents .info-container ul .selected {
+  background-color: #ffffff !important;
+}
+@media (min-width: 1024px) {
+  #crew {
+    overflow: hidden;
+  }
+  #crew main {
+    padding: 5rem 10rem 0rem;
+    height: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  #crew {
+    height: 100%;
+  }
+  #crew main {
+    padding: 5rem 7rem 0rem;
+    height: 100%;
+  }
+  #crew #contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #crew #contents .info-container {
+    width: 100% !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #crew #contents .info-container #role {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  #crew #contents .info-container #name {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+  #crew #contents .info-container #bio {
+    width: 70% !important;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  #crew #contents #indecators {
+    position: static;
+    width: 88px;
+    justify-content: space-between;
+    margin: 3rem auto;
+  }
+  #crew #contents #indecators li {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #crew main {
+    padding: 2rem;
+  }
+  #crew main h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  #crew main #contents {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #crew main #contents .info-container {
+    width: 100% !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+  #crew main #contents .info-container #role {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  #crew main #contents .info-container #name {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  #crew main #contents .info-container #bio {
+    width: 100% !important;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  #crew main #contents #targetImage {
+    height: 223px;
+    margin-top: 2rem;
+  }
+  #crew main #contents #indecators {
+    position: static;
+    width: 88px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  #crew main #contents #indecators li {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/*# sourceMappingURL=crew.css.map */

@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+body {
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 12%;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  display: none;
+}
+header nav {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  width: 60%;
+  padding-left: 8%;
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+  counter-reset: list-number;
+}
+header nav li {
+  height: 100%;
+  counter-increment: list-number;
+}
+header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2.7px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 3px solid transparent;
+}
+header nav a span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a::before {
+  content: "0" counter(list-number);
+  font-weight: bold;
+  margin-right: 12px;
+}
+header nav a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+header nav .selected {
+  border-color: #ffffff !important;
+}
+header main {
+  padding: 5% 8%;
+  height: 88%;
+}
+
+@media (min-width: 1024px) {
+  header {
+    border-top: 40px solid transparent;
+    border-left: 55px solid transparent;
+  }
+  header nav::before {
+    content: "";
+    width: 55%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    right: 98%;
+    top: 50%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  header {
+    height: 96px;
+    padding-left: 49px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 48px;
+    width: 48px;
+  }
+  header a::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding-top: 24px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.36px;
+  }
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+  header nav {
+    display: none;
+  }
+  header button {
+    display: block;
+    background: transparent;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+  }
+  header button img {
+    width: 24px;
+    height: 21px;
+  }
+  header .close-btn {
+    display: none;
+  }
+  .sidebar-mode {
+    position: relative;
+  }
+  .sidebar-mode .hamburger-btn {
+    display: none;
+  }
+  .sidebar-mode nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65%;
+    box-sizing: border-box;
+    z-index: 70;
+  }
+  .sidebar-mode nav ul {
+    flex-direction: column;
+    height: 30%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .sidebar-mode nav li {
+    width: 100%;
+  }
+  .sidebar-mode nav a {
+    border-bottom: 0px;
+    border-right: 3px solid transparent;
+    width: 100%;
+  }
+  .sidebar-mode nav .selected {
+    border-color: #ffffff !important;
+  }
+  .sidebar-mode nav .close-btn {
+    display: block !important;
+    float: right;
+    margin: 33px;
+  }
+}
+#technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+#technology main {
+  padding-top: 3rem;
+  padding-bottom: 0;
+  padding-right: 0;
+  color: #ffffff;
+}
+#technology main h3 {
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
+#technology main h3 span {
+  color: rgba(255, 255, 255, 0.25);
+  margin-right: 2%;
+}
+#technology main #contents {
+  display: flex;
+  gap: 5%;
+}
+#technology main #contents ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#technology main #contents ul li {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 2rem;
+  font-family: "Bellefair", serif;
+}
+#technology main #contents ul li:hover {
+  border: 2px solid #ffffff;
+}
+#technology main #contents ul .selected {
+  background-color: #ffffff;
+  color: #0b0d17;
+}
+#technology main #contents .text-contents-wrap {
+  margin: auto;
+  color: #d0d6f9;
+}
+#technology main #contents .text-contents-wrap h5 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem;
+}
+#technology main #contents .text-contents-wrap #name {
+  font-family: "Bellefair", serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  margin-left: 0.5rem;
+}
+#technology main #contents .text-contents-wrap #description {
+  font-size: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 3rem;
+}
+#technology main #contents #targetImage {
+  height: 46rem;
+}
+@media (min-width: 1024px) {
+  #technology main {
+    padding-left: 12rem;
+  }
+  #technology main .text-contents-wrap {
+    display: flex;
+    gap: 5rem;
+  }
+  #technology main ul {
+    height: 25rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  #technology {
+    height: 100%;
+    min-height: 100vh;
+  }
+  #technology main {
+    padding-bottom: 10%;
+    height: 100%;
+  }
+  #technology main h3 {
+    margin-left: 3rem;
+  }
+  #technology main #contents {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #technology main #contents #targetImage {
+    padding-left: 0;
+    height: 310px;
+    box-sizing: content-box;
+    margin: 5rem 0;
+    object-fit: cover;
+  }
+  #technology main #contents .text-contents-wrap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap #indecators {
+    flex-direction: row;
+    width: 210px;
+    margin-bottom: 5rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+  #technology main #contents .text-contents-wrap #indecators li {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  #technology main #contents .text-contents-wrap h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  #technology main #contents .text-contents-wrap #name {
+    font-size: 40px;
+  }
+  #technology main #contents .text-contents-wrap #description {
+    font-size: 16px;
+    width: 50%;
+    line-height: 2;
+  }
+}
+@media (max-width: 767px) {
+  #technology {
+    height: 100%;
+    min-height: 100vh;
+  }
+  #technology main {
+    padding-bottom: 10%;
+    height: 100%;
+  }
+  #technology main h3 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  #technology main #contents {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #technology main #contents #targetImage {
+    padding-left: 0;
+    height: 170px;
+    box-sizing: content-box;
+    margin: 3rem 0;
+    object-fit: cover;
+  }
+  #technology main #contents .text-contents-wrap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #technology main #contents .text-contents-wrap #indecators {
+    flex-direction: row;
+    width: 152px;
+    margin-bottom: 2rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+  #technology main #contents .text-contents-wrap #indecators li {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  #technology main #contents .text-contents-wrap h5 {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+  #technology main #contents .text-contents-wrap #name {
+    font-size: 24px;
+  }
+  #technology main #contents .text-contents-wrap #description {
+    font-size: 15px;
+    width: 80%;
+    line-height: 25px;
+  }
+}
+
+/*# sourceMappingURL=technology.css.map */
