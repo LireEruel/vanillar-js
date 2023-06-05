@@ -21,7 +21,7 @@ class ReactableHeader extends HTMLElement {
     const $anchorTech = document.createElement("a");
 
     const currentUrl = new URL(window.location.href);
-    const baseUrl = currentUrl.origin + "/pages/space-tourism";
+    const baseUrl = currentUrl.origin + "/vanillar-js/pages/space-tourism";
 
     $imglogo.setAttribute("src", `${baseUrl}/assets/shared/logo.svg`);
     $imglogo.alt = "logo image";
