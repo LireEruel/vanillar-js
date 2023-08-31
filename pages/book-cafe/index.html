@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/boilerplate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>BookCafe</title>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="">SSAFY</a></li>
-          <li><a href="">BookCafe</a></li>
+          <li><a href="" class="main-logo">SSAFY</a></li>
+          <li><a href="" class="main-logo">BookCafe</a></li>
           <li><a href="">공지사항</a></li>
         </ul>
         <ul>
@@ -23,81 +25,81 @@
       </nav>
     </header>
     <main>
-      <div>
-        <img src="./assets/img/noimg.png" alt="no img icon" />
-        <img src="./assets/img/profile.png" alt="profile image" />
-      </div>
-      <div>
-        <p>전국매장펼치기</p>
-        <p>전국매장접기</p>
-      </div>
-      <ul>
-        <li>
-          <p>서울</p>
-          <ul>
-            <li>역삼점</li>
-            <li>선릉점</li>
-          </ul>
-        </li>
-        <li>
-          <p>대전</p>
-          <ul>
-            <li>학하점</li>
-            <li>봉명점</li>
-          </ul>
-        </li>
-        <li>
-          <p>구미</p>
-          <ul>
-            <li>인동점</li>
-            <li>공단점</li>
-          </ul>
-        </li>
-        <li>
-          <p>광주</p>
-          <ul>
-            <li>하남산단점</li>
-            <li>광주역점</li>
-          </ul>
-        </li>
-      </ul>
-      <form class="select-container" method="post" action="URL">
-        <title>
-          <p>당신의 선택</p> <p>공부하고 싶은 분야를 골라 주세요!!!</p>
-        </title>
+      <aside>
+        <div class="profile-img-wrap">
+          <img src="./assets/img/noimg.png" alt="no img icon" />
+          <img src="./assets/img/profile.png" alt="profile image" />
+        </div>
+        <button id="menuFoldBtn" class="gray-box">전국매장펼치기</button>
+        <!-- <p>전국매장접기</p> -->
         <ul>
-          <li>
-            <input type="radio" name="subject" id="python" />
-            <label for="python">
-              <img src="./assets/img/poll/python.png" alt="python image" />
-              Python
-            </label>
+          <li class="gray-box">
+            <p>서울</p>
+            <ul>
+              <li>역삼점</li>
+              <li>선릉점</li>
+            </ul>
           </li>
-          <li>
-            <input type="radio" name="subject" id="html" />
-            <label for="html">
-              <img src="./assets/img/poll/html5.png" alt="html image" />
-              HTML5
-            </label>
+          <li class="gray-box">
+            <p>대전</p>
+            <ul>
+              <li>학하점</li>
+              <li>봉명점</li>
+            </ul>
           </li>
-          <li>
-            <input type="radio" name="subject" id="vue" />
-            <label for="vue">
-              <img src="./assets/img/poll/vuejs.png" alt="vue image" />
-              Vue.js
-            </label>
+          <li class="gray-box">
+            <p>구미</p>
+            <ul>
+              <li>인동점</li>
+              <li>공단점</li>
+            </ul>
           </li>
-          <li>
-            <input type="radio" name="subject" id="java" />
-            <label for="java">
-              <img src="./assets/img/poll/java.png" alt="java image" />
-              Java
-            </label>
+          <li class="gray-box">
+            <p>광주</p>
+            <ul>
+              <li>하남산단점</li>
+              <li>광주역점</li>
+            </ul>
           </li>
         </ul>
-        <div><button>투표하기</button> <button>결과보기</button></div>
-        <div>투표기간 : 21.03.01 ~ 21.03.31</div>
-      </form>
+        <form class="select-container" method="post" action="URL">
+          <title>
+            <p>당신의 선택</p> <p>공부하고 싶은 분야를 골라 주세요!!!</p>
+          </title>
+          <ul>
+            <li>
+              <input type="radio" name="subject" id="python" />
+              <label for="python">
+                <img src="./assets/img/poll/python.png" alt="python image" />
+                Python
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="subject" id="html" />
+              <label for="html">
+                <img src="./assets/img/poll/html5.png" alt="html image" />
+                HTML5
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="subject" id="vue" />
+              <label for="vue">
+                <img src="./assets/img/poll/vuejs.png" alt="vue image" />
+                Vue.js
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="subject" id="java" />
+              <label for="java">
+                <img src="./assets/img/poll/java.png" alt="java image" />
+                Java
+              </label>
+            </li>
+          </ul>
+          <div><button>투표하기</button> <button>결과보기</button></div>
+          <div>투표기간 : 21.03.01 ~ 21.03.31</div>
+        </form>
+      </aside>
       <section>
         <h4>[ 프로그래밍 언어 ]</h4>
         <ul>

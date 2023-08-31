@@ -1,0 +1,98 @@
+:root {
+  --dark-gray: #7c838f;
+  --light-gray: #b2b7bf;
+  --purple: #714a91;
+  --light-gray-tint: hsl(219°, 3%, 83%);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+header > nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > ul {
+  display: flex;
+}
+ul > li {
+  margin: auto 1rem;
+}
+ul > li > a {
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+.main-logo {
+  font-size: 3rem;
+}
+main {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+}
+aside {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-img-wrap > img {
+  width: 10rem;
+}
+
+.gray-box {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+#menuFoldBtn {
+  cursor: pointer;
+  background-color: var(--dark-gray);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+aside > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside > ul > li > p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+aside > ul > li {
+  background-color: var(--light-gray);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+aside > ul > li > ul > li {
+  margin: 1rem;
+}
