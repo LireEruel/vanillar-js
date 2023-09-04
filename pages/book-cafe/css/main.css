@@ -34,14 +34,15 @@ header > nav {
 nav > ul {
   display: flex;
 }
-ul > li {
-  margin: auto 1rem;
-}
+ul > li,
 ul > li > a {
+  margin: auto 1rem;
   color: var(--dark-gray);
   text-decoration: none;
   font-size: 1rem;
+  cursor: pointer;
 }
+
 .main-logo {
   font-size: 3rem;
   > a {
@@ -186,8 +187,7 @@ section ul {
 }
 
 .book-item {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   transition: transform 1s;
   > img {
     width: 20rem;
@@ -210,7 +210,20 @@ section ul {
   }
 }
 .book-item:hover {
-  transform: rotateY(90deg);
+  animation-duration: 2s;
+  animation-name: flip;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 
 .table-wrapper {

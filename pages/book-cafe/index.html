@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="./css/boilerplate.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>BookCafe</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -17,20 +26,28 @@
           <li><a href="">공지사항</a></li>
         </ul>
         <ul>
-          <li><a href="">로그인</a></li>
-          <li><a href="">회원가입</a></li>
-          <li><a href="">로그아웃</a></li>
-          <li><a href="">마이페이지</a></li>
-          <li><a href="">관리자</a></li>
+          <li id="loginBtn">로그인</li>
+          <li>회원가입</li>
+          <li id="logoutBtn">로그아웃</li>
+          <li>마이페이지</li>
+          <li>관리자</li>
         </ul>
       </nav>
     </header>
     <div class="middle-container">
       <div class="middle-top-contatiner">
         <aside>
-          <div class="profile-img-wrap">
-            <img src="./assets/img/noimg.png" alt="no img icon" />
-            <img src="./assets/img/profile.png" alt="profile image" />
+          <div id="profileImgWrap" class="profile-img-wrap">
+            <img
+              id="profileNoImg"
+              src="./assets/img/noimg.png"
+              alt="no img icon"
+            />
+            <img
+              id="profileImg"
+              src="./assets/img/profile.png"
+              alt="profile image"
+            />
           </div>
           <button id="menuFoldBtn" class="gray-box">전국매장펼치기</button>
           <!-- <p>전국매장접기</p> -->
@@ -269,5 +286,6 @@
         </ul>
       </footer>
     </div>
+    <script src="./js/index.js" type="module" charset="utf-8"></script>
   </body>
 </html>
