@@ -62,7 +62,7 @@ nav ul > li > a:hover {
   height: 94%;
   overflow-y: scroll;
   margin: 0 auto;
-  padding: 3rem 15%;
+  padding: 3rem 10%;
   flex-direction: column;
 }
 
@@ -70,7 +70,7 @@ nav ul > li > a:hover {
   display: flex;
 }
 aside {
-  width: 30rem;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,6 +190,7 @@ section {
 }
 section ul {
   display: flex;
+  gap: 2%;
 }
 
 .book-item {
