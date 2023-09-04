@@ -25,10 +25,19 @@ input {
     width: 100%;
     align-items: center;
     margin-bottom: 0.5rem;
-    > label {
+    > label,
+    > div > label {
       font-size: 1.1rem;
       font-weight: bold;
       margin-right: 1rem;
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      > input {
+        padding: 0.5rem;
+      }
     }
     .text-input {
       width: 40%;

@@ -24,7 +24,7 @@ const openCenteredWindow = (url, title, w, h) => {
 };
 
 export const openVoteModal = () => {
-  openCenteredWindow("./modal/addVoteModal.html", "a", 400, 400);
+  openCenteredWindow("./modal/addVoteModal.html", "a", 500, 400);
 };
 
 function addAnswer() {
