@@ -31,8 +31,10 @@ function addAnswer() {
   const answerWrap = document.createElement("div");
   answerWrap.className = "form-row";
   const input = document.createElement("input");
-  const deleteBtn = document.createElement("button");
-  deleteBtn.innerText = "삭제";
+  const deleteBtn = document.createElement("input");
+  input.classList.add("text-input");
+  deleteBtn.type = "button";
+  deleteBtn.value = "삭제";
   deleteBtn.addEventListener("click", () => {
     answerWrap.remove();
   });
@@ -46,24 +48,43 @@ if (addAnswerBtn) {
 
 const addVoteForm = document.getElementById("addVoteForm");
 
-if (addVoteForm) {
-  document
-    .getElementById("addVoteForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+function addVote(event) {
+  event.preventDefault();
 
-      const formData = new FormData(this);
-      const startDate = formData.get("startDate");
-      const endDate = formData.get("endDate");
-      const question = formData.get("question");
-      const answerList = [];
-      const answerListElement = document.getElementById("answerList").children;
-      for (let i = 0; i < answerListElement.length; i++) {
-        const value = answerListElement[i].children[0].value;
-        if (value) {
-          answerList.push(answerListElement[i].children[0].value);
-        }
-      }
-      console.log(startDate, endDate, question, answerList);
+  const formData = new FormData(this);
+  const votedata = {};
+  votedata.startDate = formData.get("startDate");
+  votedata.endDate = formData.get("endDate");
+  votedata.question = formData.get("question");
+  votedata.answerList = [];
+  const answerListElement = document.getElementById("answerList").children;
+  for (let i = 0; i < answerListElement.length; i++) {
+    const value = answerListElement[i].children[0].value;
+    if (value) {
+      votedata.answerList.push(answerListElement[i].children[0].value);
+    }
+  }
+
+  if (
+    votedata.startDate &&
+    votedata.endDate &&
+    votedata.question &&
+    votedata.answerList.length
+  ) {
+    Swal.fire({
+      icon: "success",
+      title: "투표 생성 성공",
     });
+    localStorage.setItem("poll", votedata);
+    window.close();
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "투표 생성 실패",
+    });
+  }
+}
+
+if (addVoteForm) {
+  document.getElementById("addVoteForm").addEventListener("submit", addVote);
 }

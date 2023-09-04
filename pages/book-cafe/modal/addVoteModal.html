@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투표 생성</title>
     <link rel="stylesheet" href="../css/addVoteModal.css" />
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <form id="addVoteForm" class="add-vote-modal" action="addVote">
@@ -26,15 +35,16 @@
           id="inputQuestion"
           name="question"
           placeholder="질문내용..."
+          class="text-input"
         />
       </div>
       <div class="form-row">
         <label>답변 항목</label>
-        <button id="addAnswerBtn">추가</button>
+        <input type="button" value="추가" id="addAnswerBtn" />
       </div>
       <div id="answerList">
         <div class="form-row">
-          <input type="text" />
+          <input type="text" class="text-input" />
         </div>
       </div>
       <input type="submit" value="투표 생성" class="submit-btn" />

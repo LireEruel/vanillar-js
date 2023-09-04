@@ -30,7 +30,7 @@ input {
       font-weight: bold;
       margin-right: 1rem;
     }
-    > input {
+    .text-input {
       width: 40%;
       padding: 0.5rem;
       margin-right: 0.5rem;
@@ -49,12 +49,15 @@ input {
     > input {
       padding: 0.5rem;
     }
+    .text-input {
+      width: 80%;
+    }
     overflow-y: auto;
     height: 10rem;
     margin-bottom: 1rem;
   }
 
-  > button {
+  .submit-btn {
     width: 5rem;
     border-radius: 0;
     padding: 0.2rem;
