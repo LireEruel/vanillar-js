@@ -1,10 +1,11 @@
 import login, { logout } from "./login.js";
+import { openVoteModal } from "./addVoteModalHandler.js";
 
 const loginBtn = document.querySelector("#loginBtn");
 const logoutBtn = document.querySelector("#logoutBtn");
 const menuFoldBtn = document.querySelector("#menuFoldBtn");
-const sideMenuWrap = document.querySelector("#sideMenuWrap");
-
+const manageBtn = document.getElementById("manageBtn");
+manageBtn.addEventListener("click", openVoteModal);
 let isLogined = localStorage.getItem("id") !== null;
 loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
@@ -21,7 +22,7 @@ const render = () => {
   }
 };
 
-let isOpened = false;
+let isOpened = true;
 const sideMenuSubMenuList = document.getElementsByClassName(
   "side-menu-sub-title"
 );

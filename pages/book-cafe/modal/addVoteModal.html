@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투표 생성</title>
+    <link rel="stylesheet" href="../css/addVoteModal.css" />
+  </head>
+  <body>
+    <div class="add-vote-modal">
+      <h1>투표 만들기</h1>
+      <div class="form-row">
+        <label for="inputQuestion">질문 내용</label>
+        <input type="text" id="inputQuestion" placeholder="질문내용..." />
+      </div>
+      <div class="form-row">
+        <label>답변 항목</label>
+        <button id="addAnswerBtn">추가</button>
+      </div>
+      <div id="answerList">
+        <div class="form-row">
+          <input type="text" />
+        </div>
+      </div>
+      <button class="submit-btn">투표 생성</button>
+    </div>
+    <script type="module" src="../js/addVoteModalHandler.js"></script>
+  </body>
+</html>

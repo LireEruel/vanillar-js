@@ -34,9 +34,9 @@ header > nav {
 
 nav > ul {
   display: flex;
+  align-items: center;
 }
-nav ul > li,
-nav ul > li > a {
+.nav-menu {
   margin: auto 1rem;
   color: var(--dark-gray);
   text-decoration: none;
@@ -44,8 +44,7 @@ nav ul > li > a {
   cursor: pointer;
 }
 
-nav ul > li:hover,
-nav ul > li > a:hover {
+.nav-menu:hover {
   color: var(--black);
   font-weight: bold;
 }
@@ -62,7 +61,7 @@ nav ul > li > a:hover {
   height: 94%;
   overflow-y: scroll;
   margin: 0 auto;
-  padding: 3rem 10%;
+  padding: 3rem 15%;
   flex-direction: column;
 }
 
@@ -96,6 +95,9 @@ aside {
   line-height: 1.5;
   margin-top: 0.5rem;
   font-size: 1rem;
+}
+.gray-box > p {
+  cursor: pointer;
 }
 
 #menuFoldBtn {
@@ -133,12 +135,13 @@ aside > ul > li > ul > li {
 }
 
 .form-title > p {
-  color: var(--light-gray);
+  color: var(--dark-gray);
   font-size: 1.2rem;
 }
 
-.form-title > h4 {
+.form-title > h2 {
   font-weight: 700;
+  font-size: 1rem;
   margin: 1rem auto;
 }
 
@@ -181,7 +184,7 @@ aside > ul > li > ul > li {
 }
 .form-footer {
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -213,6 +216,7 @@ section ul {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      line-height: 1.3;
     }
   }
 }
