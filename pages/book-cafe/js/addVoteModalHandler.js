@@ -43,3 +43,27 @@ function addAnswer() {
 if (addAnswerBtn) {
   addAnswerBtn.addEventListener("click", addAnswer);
 }
+
+const addVoteForm = document.getElementById("addVoteForm");
+
+if (addVoteForm) {
+  document
+    .getElementById("addVoteForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const startDate = formData.get("startDate");
+      const endDate = formData.get("endDate");
+      const question = formData.get("question");
+      const answerList = [];
+      const answerListElement = document.getElementById("answerList").children;
+      for (let i = 0; i < answerListElement.length; i++) {
+        const value = answerListElement[i].children[0].value;
+        if (value) {
+          answerList.push(answerListElement[i].children[0].value);
+        }
+      }
+      console.log(startDate, endDate, question, answerList);
+    });
+}
