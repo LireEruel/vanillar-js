@@ -5,6 +5,7 @@
   --purple: #714a91;
   --light-gray-tint: #f2f2f2;
   --white: "#fff";
+  --black: "#000";
 }
 
 html,
@@ -34,8 +35,8 @@ header > nav {
 nav > ul {
   display: flex;
 }
-ul > li,
-ul > li > a {
+nav ul > li,
+nav ul > li > a {
   margin: auto 1rem;
   color: var(--dark-gray);
   text-decoration: none;
@@ -43,6 +44,11 @@ ul > li > a {
   cursor: pointer;
 }
 
+nav ul > li:hover,
+nav ul > li > a:hover {
+  color: var(--black);
+  font-weight: bold;
+}
 .main-logo {
   font-size: 3rem;
   > a {
