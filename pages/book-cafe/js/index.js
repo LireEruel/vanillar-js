@@ -1,5 +1,6 @@
 import login, { logout } from "./login.js";
 import { openVoteModal } from "./addVoteModalHandler.js";
+import "./vote.js";
 
 const loginBtn = document.querySelector("#loginBtn");
 const logoutBtn = document.querySelector("#logoutBtn");

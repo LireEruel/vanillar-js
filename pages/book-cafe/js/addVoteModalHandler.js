@@ -75,7 +75,7 @@ function addVote(event) {
       icon: "success",
       title: "투표 생성 성공",
     });
-    localStorage.setItem("poll", votedata);
+    localStorage.setItem("poll", JSON.stringify(votedata));
     window.close();
   } else {
     Swal.fire({

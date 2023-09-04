@@ -81,47 +81,28 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               </ul>
             </li>
           </ul>
-          <form class="select-form" method="post" action="URL">
-            <div class="form-title">
-              <p>[ 당신의 선택]</p>
-              <h2>공부하고 싶은 분야를 골라 주세요!!!</h2>
-            </div>
-            <ul>
-              <li>
-                <input type="radio" name="subject" id="python" />
-                <label for="python">
-                  <img src="./assets/img/poll/python.png" alt="python image" />
-                  Python
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="subject" id="html" />
-                <label for="html">
-                  <img src="./assets/img/poll/html5.png" alt="html image" />
-                  HTML5
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="subject" id="vue" />
-                <label for="vue">
-                  <img src="./assets/img/poll/vuejs.png" alt="vue image" />
-                  Vue.js
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="subject" id="java" />
-                <label for="java">
-                  <img src="./assets/img/poll/java.png" alt="java image" />
-                  Java
-                </label>
-              </li>
-            </ul>
-            <div class="button-wrap">
-              <button class="vote-btn">투표하기</button>
-              <button class="result-btn">결과보기</button>
-            </div>
-            <div class="form-footer">투표기간 : 21.03.01 ~ 21.03.31</div>
-          </form>
+          <div id="formWrap">
+            <p>진행중인 투표가 없습니다.</p>
+            <form
+              id="selectForm"
+              class="select-form"
+              method="post"
+              action="URL"
+            >
+              <div class="form-title">
+                <p>[ 당신의 선택]</p>
+                <h2 id="formTitle">공부하고 싶은 분야를 골라 주세요!!!</h2>
+              </div>
+              <ul id="answerList"></ul>
+              <div class="button-wrap">
+                <button class="vote-btn">투표하기</button>
+                <button class="result-btn">결과보기</button>
+              </div>
+              <div id="pollRange" class="form-footer">
+                투표기간 : 21.03.01 ~ 21.03.31
+              </div>
+            </form>
+          </div>
         </aside>
         <main>
           <section>
