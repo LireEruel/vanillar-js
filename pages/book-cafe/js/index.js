@@ -1,12 +1,11 @@
 import login, { logout } from "./login.js";
-import { openVoteModal } from "./addVoteModalHandler.js";
+import { addVote, addAnswer } from "./addVoteModalHandler.js";
 import "./vote.js";
 
 const loginBtn = document.querySelector("#loginBtn");
 const logoutBtn = document.querySelector("#logoutBtn");
 const menuFoldBtn = document.querySelector("#menuFoldBtn");
-const manageBtn = document.getElementById("manageBtn");
-manageBtn.addEventListener("click", openVoteModal);
+const answerList = document.getElementById("answerList");
 let isLogined = localStorage.getItem("id") !== null;
 loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
@@ -21,6 +20,15 @@ const render = () => {
     document.querySelector("#myPageBtn").style.display = "none";
     document.querySelector("#manageBtn").style.display = "none";
   }
+  document
+    .getElementById("addVoteForm")
+    .addEventListener("submit", (e) => addVote(e));
+  document
+    .getElementById("addAnswerBtn")
+    .addEventListener("click", (e) => addAnswer(e, answerList));
+
+  console.log(document.getElementById("answerList"));
+  console.log(document.getElementById("addVoteForm"));
 };
 
 let isOpened = true;

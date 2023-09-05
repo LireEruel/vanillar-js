@@ -55,7 +55,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               <li class="nav-item">
                 <a class="nav-link" href="#" id="myPageBtn">마이페이지</a>
               </li>
-              <li class="nav-item">
+              <li
+                class="nav-item"
+                data-bs-toggle="modal"
+                data-bs-target="#addVoteModal"
+              >
                 <a class="nav-link" href="#" id="manageBtn">관리자</a>
               </li>
             </ul>
@@ -303,6 +307,74 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <li>ⓒ SSAFY Corp</li>
         </ul>
       </footer>
+    </div>
+    <div class="modal fade" id="addVoteModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">투표 만들기</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="addVoteForm" class="add-vote-modal">
+              <div class="d-flex gap-3">
+                <div>
+                  <label for="startDate" class="form-label">시작일</label>
+                  <input
+                    type="date"
+                    name="startDate"
+                    id="startDate"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="endDate" class="form-label">종료일</label>
+                  <input
+                    type="date"
+                    name="endDate"
+                    id="endDate"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="inputQuestion">질문 내용</label>
+                <input
+                  type="text"
+                  id="inputQuestion"
+                  name="question"
+                  placeholder="질문내용..."
+                  class="text-input"
+                />
+              </div>
+              <div class="form-row">
+                <label>답변 항목</label>
+                <input type="button" value="추가" id="addAnswerBtn" />
+              </div>
+              <div id="pollAnswerList">
+                <div class="form-row">
+                  <input type="text" class="text-input" />
+                </div>
+              </div>
+              <input type="submit" value="투표 생성" class="submit-btn" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./js/index.js" type="module" charset="utf-8"></script>
     <script
