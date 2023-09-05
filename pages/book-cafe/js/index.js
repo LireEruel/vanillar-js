@@ -30,22 +30,39 @@ const sideMenuSubMenuList = document.getElementsByClassName(
 const sideMenuSubItemsList = document.getElementsByClassName(
   "side-menu-sub-items"
 );
+
+const checkMenuFoldState = () => {
+  let foldCount = 0;
+  for (let i = 0; i < 4; i++) {
+    if (sideMenuSubItemsList[i].style.display === "none") {
+      foldCount++;
+    }
+  }
+  if (foldCount === 0) {
+    menuFoldBtn.innerHTML = "전국매장접기";
+  } else if (foldCount === 4) {
+    menuFoldBtn.innerHTML = "전국매장펼치기";
+  }
+};
+
 for (let i = 0; i < sideMenuSubMenuList.length; i++) {
   sideMenuSubMenuList[i].addEventListener("click", () => {
     sideMenuSubItemsList[i].style.display =
       sideMenuSubItemsList[i].style.display === "none" ? "block" : "none";
+    checkMenuFoldState();
   });
 }
 
 menuFoldBtn.addEventListener("click", () => {
-  console.log(sideMenuSubItemsList);
   if (isOpened) {
     isOpened = false;
+    menuFoldBtn.innerHTML = "전국매장펼치기";
     for (let i = 0; i < sideMenuSubItemsList.length; i++) {
       sideMenuSubItemsList[i].style.display = "none";
     }
   } else {
     isOpened = true;
+    menuFoldBtn.innerHTML = "전국매장접기";
     for (let i = 0; i < sideMenuSubItemsList.length; i++) {
       sideMenuSubItemsList[i].style.display = "block";
     }
