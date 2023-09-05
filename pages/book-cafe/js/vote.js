@@ -24,7 +24,7 @@ if (pollData) {
     answerList.appendChild(li);
   });
 } else {
-  if (document.getElementById("formWrap").classList.contains("empty-poll")) {
+  if (!document.getElementById("formWrap").classList.contains("empty-poll")) {
     document.getElementById("formWrap").classList.add("empty-poll");
   }
 }

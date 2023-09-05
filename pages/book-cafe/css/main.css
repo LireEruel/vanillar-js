@@ -49,7 +49,7 @@ nav > ul {
   font-weight: bold;
 }
 .main-logo {
-  font-size: 3rem;
+  font-size: 2rem;
   > a {
     color: var(--dark-gray);
     text-decoration: none;
@@ -69,11 +69,12 @@ nav > ul {
   display: flex;
 }
 aside {
-  width: 20rem;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2rem;
+  min-width: 15rem;
 }
 
 .profile-img-wrap {
@@ -123,26 +124,73 @@ aside > ul > li > ul > li {
   margin: 1rem;
 }
 
+#formWrap {
+  > p {
+    display: none;
+  }
+}
+.empty-poll {
+  > form {
+    display: none;
+  }
+  > p {
+    display: block !important;
+    font-size: 1.2rem;
+    border: 1px solid var(--light-gray);
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
 .select-form {
   border: 1px solid var(--light-gray);
   width: 100%;
   padding: 1rem;
   margin: 1rem 0;
-}
 
-.form-title {
-  text-align: center;
-}
+  .form-title {
+    text-align: center;
+    > p {
+      color: var(--dark-gray);
+      font-size: 1.2rem;
+    }
+    > h2 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 1rem auto;
+    }
+  }
 
-.form-title > p {
-  color: var(--dark-gray);
-  font-size: 1.2rem;
-}
-
-.form-title > h2 {
-  font-weight: 700;
-  font-size: 1rem;
-  margin: 1rem auto;
+  > ul > li {
+    margin: 1rem;
+    > label {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    > button {
+      width: 5rem;
+      height: 2rem;
+      margin-left: 0.5rem;
+    }
+    .vote-btn {
+      background-color: var(--purple);
+      color: white;
+      border: none;
+    }
+    .result-btn {
+      border-color: var(--light-gray);
+      background-color: var(--white);
+    }
+  }
+  .form-footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .sub-title {
@@ -150,57 +198,28 @@ aside > ul > li > ul > li {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-
-.select-form img {
-  width: 3rem;
+main {
+  width: 100%;
 }
-.select-form li {
-  margin: 1rem;
-}
-.select-form li label {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.button-wrap {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.button-wrap > button {
-  width: 5rem;
-  height: 2rem;
-  margin-left: 0.5rem;
-}
-
-.vote-btn {
-  background-color: var(--purple);
-  color: white;
-  border: none;
-}
-.result-btn {
-  border-color: var(--light-gray);
-  background-color: var(--white);
-}
-.form-footer {
-  margin-top: 2rem;
-  font-size: 1rem;
-  text-align: center;
-}
-
 section {
   margin-bottom: 2rem;
-}
-section ul {
-  display: flex;
-  gap: 2%;
+  width: 100%;
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
 }
 
 .book-item {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   transition: transform 1s;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   > img {
-    width: 20rem;
     max-height: 20rem;
   }
   > div {
