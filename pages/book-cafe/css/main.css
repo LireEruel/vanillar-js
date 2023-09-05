@@ -16,6 +16,12 @@ body {
   overflow: hidden;
   font-family: "Noto Sans KR", sans-serif;
 }
+p {
+  margin-bottom: 0;
+}
+ul {
+  padding-left: 0;
+}
 header {
   height: 6%;
   display: flex;

@@ -39,8 +39,10 @@ const checkMenuFoldState = () => {
     }
   }
   if (foldCount === 0) {
+    isOpened = true;
     menuFoldBtn.innerHTML = "전국매장접기";
   } else if (foldCount === 4) {
+    isOpened = false;
     menuFoldBtn.innerHTML = "전국매장펼치기";
   }
 };

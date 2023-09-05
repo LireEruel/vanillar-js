@@ -2,13 +2,17 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/boilerplate.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <title>BookCafe</title>
-    <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
-"></script>
+
     <link
       href="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
@@ -18,20 +22,45 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <h1 class="main-logo"><a href="">SSAFY BookCafe</a></h1>
-          </li>
-          <li><a href="" class="nav-menu">공지사항</a></li>
-        </ul>
-        <ul>
-          <li class="nav-menu" id="loginBtn">로그인</li>
-          <li class="nav-menu" id="signUpBtn">회원가입</li>
-          <li class="nav-menu" id="logoutBtn">로그아웃</li>
-          <li class="nav-menu" id="myPageBtn">마이페이지</li>
-          <li class="nav-menu" id="manageBtn">관리자</li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary" href="#">SSAFY BookCafe</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">공지사항</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="loginBtn">로그인</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="signUpBtn">회원가입</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="logoutBtn">로그아웃</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="myPageBtn">마이페이지</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="manageBtn">관리자</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="middle-container">
@@ -52,28 +81,36 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <button id="menuFoldBtn" class="gray-box">전국매장접기</button>
           <!-- <p>전국매장접기</p> -->
           <ul id="sideMenuWrap">
-            <li class="gray-box side-menu-sub-title">
+            <li
+              class="gray-box side-menu-sub-title bg-primary text-white text-center"
+            >
               <p>서울</p>
               <ul class="side-menu-sub-items">
                 <li>역삼점</li>
                 <li>선릉점</li>
               </ul>
             </li>
-            <li class="gray-box side-menu-sub-title">
+            <li
+              class="gray-box side-menu-sub-title bg-primary text-white text-center"
+            >
               <p>대전</p>
               <ul class="side-menu-sub-items">
                 <li>학하점</li>
                 <li>봉명점</li>
               </ul>
             </li>
-            <li class="gray-box side-menu-sub-title">
+            <li
+              class="gray-box side-menu-sub-title bg-primary text-white text-center"
+            >
               <p>구미</p>
               <ul class="side-menu-sub-items">
                 <li>인동점</li>
                 <li>공단점</li>
               </ul>
             </li>
-            <li class="gray-box side-menu-sub-title">
+            <li
+              class="gray-box side-menu-sub-title bg-primary text-white text-center"
+            >
               <p>광주</p>
               <ul class="side-menu-sub-items">
                 <li>하남산단점</li>
@@ -268,5 +305,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </footer>
     </div>
     <script src="./js/index.js" type="module" charset="utf-8"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
   </body>
 </html>

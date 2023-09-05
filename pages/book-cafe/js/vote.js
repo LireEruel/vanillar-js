@@ -1,5 +1,3 @@
-console.log(JSON.parse(localStorage.getItem("poll")));
-
 const pollData = JSON.parse(localStorage.getItem("poll"));
 const selectForm = document.getElementById("selectForm");
 if (pollData) {
