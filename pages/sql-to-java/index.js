@@ -11,7 +11,9 @@ sqlBuildeBtn.addEventListener("click", () => {
   let outputText = "";
   for (let i = 0; i < inputTextList.length; i++) {
     outputText +=
-      'StringBuilder sql = new StringBuilder("' + inputTextList[i] + '\\n") \n';
+      'StringBuilder sql = new StringBuilder("' +
+      inputTextList[i] +
+      ' \\n") \n';
   }
   resultArea.value = outputText;
 });
