@@ -1,10 +1,10 @@
 export function addAnswer() {
   const answerList = document.getElementById("pollAnswerList");
   const answerWrap = document.createElement("div");
-  answerWrap.className = "form-row";
+  answerWrap.className = "row";
   const input = document.createElement("input");
   const deleteBtn = document.createElement("input");
-  input.classList.add("text-input");
+  input.className = "form-control col-md-6";
   deleteBtn.type = "button";
   deleteBtn.value = "삭제";
   deleteBtn.addEventListener("click", () => {
