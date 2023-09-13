@@ -5,8 +5,8 @@ const htmlBuildeBtn = document.getElementById("htmlBuildeBtn");
 
 sqlBuildeBtn.addEventListener("click", () => {
   const inputText = textArea.value;
-  const replacedText = inputText.replace(/"/g, "'");
-
+  let replacedText = inputText.replace(/"/g, "'");
+  replacedText = replacedText.replace(/;/g, "");
   const inputTextList = replacedText.split("\n");
   let outputText = "";
   for (let i = 0; i < inputTextList.length; i++) {
