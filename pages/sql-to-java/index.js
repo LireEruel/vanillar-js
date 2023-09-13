@@ -13,7 +13,7 @@ sqlBuildeBtn.addEventListener("click", () => {
     outputText +=
       'StringBuilder sql = new StringBuilder("' +
       inputTextList[i] +
-      ' \\n") \n';
+      ' \\n");\n';
   }
   resultArea.value = outputText;
 });
