@@ -20,5 +20,11 @@ sqlBuildeBtn.addEventListener("click", () => {
 
 htmlBuildeBtn.addEventListener("click", () => {
   const inputText = textArea.value;
-  resultArea.value = inputText.replace(/["']/g, '\\"');
+  const inputTextList = inputText.split("\n");
+  console.log(inputTextList);
+  let outputText = "";
+  for (let i = 0; i < inputTextList.length; i++) {
+    outputText += 'out.println("' + inputTextList[i] + ' ");\n';
+  }
+  resultArea.value = outputText;
 });
