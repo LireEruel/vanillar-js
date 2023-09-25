@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  justify-content: center;
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 43.75rem;
+  height: 9.375rem;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  border: 3px solid rgba(255, 255, 255, 0.29);
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+header > .logo {
+  padding: 1.8rem 2rem;
+}
+header > .score-block {
+  width: 9.375rem;
+  height: 7.125rem;
+  margin: 1rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(0deg, #f3f3f3 0%, #fff 100%);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header > .score-block > .score-label {
+  color: #2a45c2;
+  font-family: Barlow Semi Condensed;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.15625rem;
+}
+header > .score-block > .score-value {
+  color: #565468;
+  text-align: center;
+  font-family: Barlow Semi Condensed;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem; /* 100% */
+}
+main {
+  width: 29.75rem;
+  height: 26.875rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/bg-triangle.svg");
+  background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+  background-position: center center; /* 배경 이미지의 위치를 중앙으로 설정 */
+}
+
+main > .flex-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
